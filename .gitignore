@@ -3,3 +3,5 @@ scratchpad
 .tmp
 .sass-cache
 bower_components
+*.log
+.bash*
