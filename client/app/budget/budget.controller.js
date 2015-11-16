@@ -266,6 +266,7 @@
 
         vm.setupRangeChart = function (myRangeChart) {
             myRangeChart.rangeChart(vm.paymentRangeSelectChart);
+            console.log('vm.paymentRangeSelectChart', vm.paymentRangeSelectChart)
             vm.paymentRangeSelectChart.render();
         };
 
@@ -290,7 +291,6 @@
         // data table does not use crossfilter group but rather a closure
         // as a grouping function
         vm.tableGroup = function (d) {
-
             return d.bookingYear;
         };
 
@@ -357,10 +357,11 @@
                     //console.log('Imported bookings data', results);
 
                     vm.ndx.add(results);
-                    //console.log(vm.ndx);
+                    //console.log( 'vm.ndx', vm.ndx);
                     vm.paymentMax = Math.round(vm.paymentDimension.top(1)[0].amount / 1000);
                     vm.resetAll();
                     // Reset elasticX to false, otherwise rage chart won't work.
+//                     console.log('$scope', $scope)
                     $scope.paymentRangeChart.elasticX(false);
                 })
                 .catch(function (err) {

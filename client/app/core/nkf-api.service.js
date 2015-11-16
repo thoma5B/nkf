@@ -132,6 +132,8 @@
         /** Private Methods **/
 
         function httpExecute(requestUrl, method, data) {
+          console.log('URL', baseUrl, requestUrl, method,'data: ', data, 'headers', requestConfig.headers)
+
 
             return $http({
                 url: baseUrl + requestUrl,
