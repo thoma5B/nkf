@@ -282,7 +282,7 @@ Der sachlogische Zusammenhang ist vermutlich die Ursache, dass die Begriffe Einz
 Aufgrund sachlicher Unterschiede zwischen den Ebenen und zeitlicher Verschiebungen ist es z.B. nicht sinnvoll Einzahlungen nach Ertragskategorien zu Gruppieren. Aber genau das, wird im NKF-System gemacht. Jede Ebene muss nach den für die Ebene spezifischen Eigenschaften gruppiert werden. Auf jeder Ebene sollten auch nur die Fragen gestellt werden, für die die Ebene aussagefähig ist.
 
 
->![Abbildung: Ebenen der Buchhaltung](/graphics/EbenenDerBuchhaltung.png)
+>![Abbildung: Ebenen der Buchhaltung](./graphics/EbenenDerBuchhaltung.png)
 
 Eine ausführliche und anschauliche Erklärung der obigen Begriffe findet sich hier.
 Die Bestandsgröße zu der Einzahlungs- und Auszahlungsebene sind die liquiden Mittel, d.h. Bargeld und Sichteinlagen bei Banken. Mangelnde Liquidität ist neben der Überschuldung die häufigste Insolvenzursache. Auch wenn über Gemeinden kein Insolvenzverfahren verhängt werden kann, hat die Aufrechterhaltung der Zahlungsfähigkeit auch für Gemeinden eine sehr hohe Priorität.
