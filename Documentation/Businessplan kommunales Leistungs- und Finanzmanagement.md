@@ -1,11 +1,11 @@
 
 # iNKF -- Infrastruktur für das Neue Kommunale Finanzmanagement
 #### **Business-Case für ein kommunales Daten/IT-Projekt (www.egov-infrastructure.org)**
-#### Data-warehousing und Visualiesierung kommunaler Finanzverwaltungsdaten 
+#### Data-Warehousing-Infrastruktur und Visualisierung kommunaler Finanzverwaltungsdaten
 
 ```
 Autoren: Thomas Bunke, Arne Pfeilsticker
-Stand:   09.11.2015
+Stand:   20.12.2015
 Status:  in Arbeit
 ```
 
@@ -17,12 +17,13 @@ Status:  in Arbeit
 #### **Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**
 
 
-Die **Webanwendung** liefert **Daten-Visualisierung kommunaler Haushaltsdaten** inklusive vielfältiger **Analyse**-Tools. Sie unterstützt kommunale **Abgeordnete** in ihrer Arbeit und gibt engagierten **Bürgern** ein mächtiges **Werkzeug** in die Hand, welches es ermöglicht, die Leistungs-Perfomance ihrer Stadt- oder Gemeindeverwaltung vergleichend und **nutzenorientiert** kritisch zu **bewerten**.
+1. Die **Webanwendung** liefert **Daten-Visualisierung kommunaler Haushaltsdaten** inklusive vielfältiger **Analyse**-Tools. Sie unterstützt kommunale **Abgeordnete** in ihrer Arbeit und gibt engagierten **Bürgern** ein mächtiges **Werkzeug** in die Hand, welches es ermöglicht, die Leistungs-Perfomance ihrer Stadt- oder Gemeindeverwaltung vergleichend und **nutzenorientiert** kritisch zu **bewerten**.
 
+2. **IT-Infrastruktur** und **Datenarchitektur** für die Implementierung einer sachgemäßen **Buchhaltung** im Sinne der **neuen kommunalen Finanzordnung (NKF)**, welche die Unzulänglichkeiten herkömmlicher, auf Unternehmen ausgelegter Buchhaltungssysteme überwindet.
 
 ### 2 Zielstellung
 #### 2.1  Phase 1: Visualisierung der NKF-Inhalte
-Die Webanwendung bietet eine klare und benutzerfreundliche Oberfläche, die die Daten des NKF-Systems darstellt.
+Die Webanwendung bietet eine klare und benutzerfreundliche Oberfläche, die die Daten des NKF-Systems in Form von zusammenfassenden Tabellen, Infografiken und farbigen Landkarten darstellt.
 
 > offensichtlich und verständlich
 
@@ -34,7 +35,7 @@ Daten sind  immer mit Bedeutung verknüpft. Bei der Darstellung liegt der Haupta
 
 
 
-#### 2.2 Phase 2: iNKF-Studio -- Kommunale Finanz-Management-Software 
+#### 2.2 Phase 2: iNKF-Studio -- Kommunale Finanz-Management-Software
 
 > Erheblich mehr Leistung mit erheblich weniger Kosten
 
@@ -45,40 +46,36 @@ In Phase zwei soll eine Finanz-Management-Software für die Gemeinden entwickelt
 3. Aufträge vergeben
 4. Rechnungen erstellen und Zahlungen veranlassen
 
-Damit sind die Verwaltungs-Ereignisse (auch Fakten genannt), 
+Damit sind die Verwaltungs-Ereignisse (auch Fakten genannt),
 
-* Leistung von der Kommune gegenüber dem Bürger, 
+* Leistung von der Kommune gegenüber dem Bürger,
 * Investitionen durch die öffentliche Hand und  
-* Gebühren/Abgaben des Bürgers 
+* Gebühren/Abgaben des Bürgers
 * ...
 
 von vornherein so gestaltet, dass sowohl die rechtliche als auch wirtschaftliche Interpretation korrekt abgebildet wIrd.
 
-Das vorgeschlagene operative System soll in einer Infrastruktur-Architektur aufgebaut werden, die im [Kapitel 5.2.2][5.2.2] näher beschrieben wird. Bei den Daten handelt es sich um die Daten des Neuen kommunalen Finanzmanagement (NKF). 
+Das vorgeschlagene operative System soll in einer Infrastruktur-Architektur aufgebaut werden, die im [Kapitel 5.2.2][5.2.2] näher beschrieben wird. Bei den Daten handelt es sich um die Daten des Neuen kommunalen Finanzmanagement (NKF).
 
 
 ## 3. Probleme von Kameralistik und herkömmlichem NKF
 
-Beschrieben wird dieses System in den über 3.000 Seiten umfassenden NKF-Handreichungen für Kommunen. Die Ziele des Neuen Kommunalen Finanzmanagements (NKF) könnten selbst 10 Jahre nach Projektstart nicht viel besser formuliert werden:
+Beschrieben wird dieses System in den über 3.000 Seiten umfassenden NKF-Handreichungen für Kommunen. Die dort formulierten Ziele lauten:
 
 * Die Orientierung an den Bedürfnissen der Bürger durch konsequente Produktorientierung und Steuerung über Ziele und Kennzahlen
 * Förderung nachhaltiger Haushaltswirtschaft und intergenerativer Gerechtigkeit
 * Mehr Transparenz im kommunalen Haushalt für die Bürgerinnen und Bürger
 
-Diese angestrebten Ziele sind zwar genau richtig, aber aufgrund einiger Entscheidungen bei der Umsetzung können diese Ziele nur sehr eingeschränkt und in vielen Fällen nicht erreicht werden. 
-
-Im folgenden werden diese Probleme aufgelistet ...
+Diese angestrebten Ziele sind zwar genau richtig, aber aufgrund einiger Spezifika bei der Implementierung können diese gar nicht, oder nur sehr eingeschränkt, erreicht werden. Im folgenden werden diese Probleme erörtert.
 
 #### 3.1.1 Problem (NKF): Diskrepanz von Information und Inhalt
 
-Inhalte des NKF-System geben nicht die Informationen wieder, die den Daten kommunalwirtschaftliche Bedeutung geben. 
+Inhalte des NKF-System geben nicht die Informationen wieder, die den Daten kommunalwirtschaftliche Bedeutung geben. Und die Ergebnisrechnung eines Fachbereichs alleine lässt im Allgemeinen eben keine Schlussfolgerungen auf die Wirtschaftlichkeit dieses Fachbereichs zu:
 
-Im Allgemeinen kann von einer Ergebnisrechnung eines Fachbereichs nicht auf die Wirtschaftlichkeit dieses Fachbereichs geschlossen werden:
-
-* Beispielsweise hat die Stadt Köln in 2009 für die Produktgruppe 211, Grundschulen,  einen Aufwand für den Unterhalt der Grundstücke und baulichen Anlagen von insgesamt 77 €. Die Stadt Oberhausen hat für die gleiche Position einen Aufwand von 2.518.589 €. Das Verhältnis *Köln:Oberhausen* ist somit 1:32.709.
+* Beispielsweise hat die Stadt Köln in 2009 für die Produktgruppe 211, Grundschulen,  einen Aufwand für den Unterhalt der Grundstücke und baulichen Anlagen von insgesamt 77 €. Die Stadt Oberhausen hat für die gleiche Position einen Aufwand von 2.518.589 €. Das Verhältnis *Köln*:*Oberhausen* ist somit 1:32.709.
 Im Gegensatz dazu hat Oberhausen für die gleiche Produktgruppe einen Aufwand an Mieten und Pachten von 40.390 € und Köln einen Aufwand von 37.333.878 €. Das Verhältnis Köln:Oberhausen ist 924:1.
 
-Dieses einfache Beispiel legt nahe, dass es mit einem einfachen Vergleich von Produkten und Ergebnispositionen nicht getan ist. Selbst Daten, die in einem Verhältnis von 5:1 vorliegen und damit der Bevölkerung der beiden Städte entsprechen, sind mit Vorsicht zu genießen. Zum einen ist die Aufwand-Ertrags-Ebene bei Kommunen keine geeignete Vergleichsebene 1. Zum anderen weiß man nicht, ob die Produktstruktur vergleichbar ist. Diese Entscheidungen führten auch dazu, dass das NKF-System unnötig komplex wurde.
+Dieses einfache Beispiel legt nahe, dass es mit einem einfachen Vergleich von Produkten und Ergebnispositionen nicht getan ist. Selbst Daten, die in einem Verhältnis von 5:1 vorliegen und damit der Bevölkerung der beiden Städte entsprechen, sind mit Vorsicht zu genießen. Zum einen ist die Aufwand-Ertrags-Ebene bei Kommunen keine geeignete Vergleichsebene. Zum anderen weiß man nicht, ob die Produktstruktur vergleichbar ist. Diese Entscheidungen führten auch dazu, dass das NKF-System unnötig komplex wurde.
 
 
 #### 3.1.2 Lösung (iNKF) Kosten und Nutzen einander zuordnen
@@ -91,9 +88,9 @@ Durch die korrekte Zuordnung von Teilbilanzen und Fakten kann  gezeigt werden, o
 
 In Kommunen sind die Einnahmen an die Steuergesetze und Abgabenordnung  gebunden; die Leistungen an die Bürger an Leistungsgesetze. Diese Zweiteilung führt dazu, dass auf der Grundlage der Ergebnisrechnung keine Aussage über das wirtschaftliche Verhalten der Kommunen oder ihrer Ämter gemacht werden kann.
 
-Aus der Sicht der doppelten Buchführung stehen in einer Gemeinde die Gewinner und Verlierer von vornherein fest. Die Ämter die Steuern und Abgaben eintreiben sind die strahlenden Gewinner und Ämter für Schulen, Jugend, Sport, Parks, etc. werden als belastende Verlustpositionen empfunden: 
+Aus der Sicht der doppelten Buchführung stehen in einer Gemeinde die Gewinner und Verlierer von vornherein fest. Die Ämter die Steuern und Abgaben eintreiben sind die strahlenden Gewinner und Ämter für Schulen, Jugend, Sport, Parks, etc. werden als belastende Verlustpositionen empfunden:
 
-* Vergleicht man die Ergebnisrechnung einer Gemeinde mit einem Supermarkt, dann wäre das ungefähr so, wie wenn man behaupten würde, dass nur die Kassierer/innen einen Gewinn erwirtschaftet haben und alle anderen Mitarbeiter machen nur Verluste und kosten nur Geld. 
+* Vergleicht man die Ergebnisrechnung einer Gemeinde mit einem Supermarkt, dann wäre das ungefähr so, wie wenn man behaupten würde, dass nur die Kassierer/innen einen Gewinn erwirtschaftet haben und alle anderen Mitarbeiter machen nur Verluste und kosten nur Geld.
 
 #### 3.2.2 Lösung (iNKF): Produkt- und Gemeinwohlorientierung
 
@@ -108,34 +105,39 @@ Dennoch wird die positive Seite der unternehmerischen Gewinnorientierung nicht v
 
 #### 3.3.1 Problem (NKF): Komplex und kompliziert
 
-Aufgrund der Komplexität kann das NKF-System in den Gemeinden nicht wirklich umgesetzt und gelebt werden. Vermutlich (**TODO** mit Zitat belegen, Interview mit Kämmerer) empfinden die Gemeinden das NKF-System als eine erhebliche Mehrbelastung mit sehr begrenztem Nutzen.
-Durch die Einführung der Doppelten Buchführung im Rahmen des NKFs haben sich die Kommunen eine Rechnungslegung zugelegt, die eigentlich für einen ganz anderen Zweck gemacht wurde. Sie wurde von und für gewinnorientierte Unternehmen entwickelt und für diesen Kontext und dieses Ziel ist die Doppelte Buchführung ein geeignetes Instrument.
+Aufgrund der Komplexität kann das NKF-System in den Gemeinden nicht wirklich umgesetzt und gelebt werden. Tatsächlich (**TODO** mit Zitat belegen, Interview mit Kämmerer) empfinden die Gemeinden das NKF-System als eine erhebliche Mehrbelastung mit sehr begrenztem Nutzen.
+Durch die unsachgemäße Einführung der Doppelten Buchführung haben sich die Kommunen eine zweckentfremdete Rechnungslegung zugelegt, die eigentlich von und für gewinnorientierte Unternehmen entwickelt wurde.
+
+
+##### Negativbeispiel: Hierarchien in Matrixstruktur
+
+Die Folge sind riesige Tabelle, die wenig relevante Daten enthalten. Beispielsweise hat die Tabelle "71147-14i" der Kölner Finanzbuchhaltung über 5,8 Mill. Zeilen (Auszahlungen nach Gemeinden x Auszahlungskonten x Produktgruppen = 442 x 153 x 87) pro Jahr – aber weniger als 10% der Zeilen enthalten Informationen.
+
 
 #### 3.3.2 Lösung (iNKF): Spezifische Rechnungslegung implementiert
 
-> "Wir haben eine Rechnungslegung entwickelt, die den spezifischen Aufgaben und Bedürfnissen der Gemeinden gerecht wird." (Arne Pfeilsticker)
+Wir haben eine Rechnungslegung entwickelt, die den spezifischen Aufgaben und Bedürfnissen der Gemeinden gerecht wird.
 
-----------
 
-### 3.3  Übergeordnete Ziele 
-> *"Der Weg zur globalen Demokratie führt nicht durch die Staaten. Er führt durch Städte. Die Demokratie wurde in der antiken Polis geboren. Ich glaube, sie kann in der globalen Kosmopolis wiedergeboren werden. Auf dieser Reise von Polis zu Kosmopolis können wir die Macht der Demokratie wieder entdecken auf einer globalen Ebene. Einen Völkerbund können wir nicht kreieren. Das ist gescheitert. Aber einen Städtebund. Keine Vereinten [..] Nationen, sondern die Vereinten Städte der Welt." (Benjamin Barber, [TED-Talk][4])* 
+### 3.4  Übergeordnete Ziele
+> *"Der Weg zur globalen Demokratie führt nicht durch die Staaten. Er führt durch Städte. Die Demokratie wurde in der antiken Polis geboren. Ich glaube, sie kann in der globalen Kosmopolis wiedergeboren werden. Auf dieser Reise von Polis zu Kosmopolis können wir die Macht der Demokratie wieder entdecken auf einer globalen Ebene. Einen Völkerbund können wir nicht kreieren. Das ist gescheitert. Aber einen Städtebund. Keine Vereinten [..] Nationen, sondern die Vereinten Städte der Welt." (Benjamin Barber, [TED-Talk][4])*
 [4]: [https://www.ted.com/talks/benjamin_barber_why_mayors_should_rule_the_world/transcript?language=de1
-####3.3.1 Kooperation
+#### 3.4.1 Kooperation
 Von unserer Infrastruktur werden nicht nur Gemeinden in der Bundesrepublik, sondern Gemeinden weltweit profitieren.
 
 Wir glauben, dass die Kommunen für Demokratie und Wohlstand in der Welt eine Schlüsselrolle einnehmen und dass diese Rolle in der globalisierten Welt noch an Bedeutung gewinnen wird. Wir glauben, dass kooperatives Verhalten unter den Gemeinden, auf Basis von neutralen Vergleichskennzahlen, den Wunsch der Kommunen, wirtschaftlich unabhängig und demokratisch fortschrittlich organisiert zu sein, besser erfüllen kann, als wenn diese versuchen das Wettbewerbsprinzip der Unternehmen zu übernehmen.
 
-####3.3.2 Synergieeffekte schaffen
+#### 3.4.2 Synergieeffekte schaffen
 Jede Gemeinde, die am iNKF-System angeschlossen ist, hat automatisch Zugriff auf die nicht vertraulichen Daten aller Teilnehmer. Vertragsvorlagen, Planungsunterlagen, Arbeitspläne und jede Menge Erfahrungen könnten so effektive geteilt werden und zu erheblichen Synergieeffekten führen.
 
-####3.3.3 Gemeinsame konstruktive Politik
+#### 3.4.3 Gemeinsame konstruktive Politik
 Für die VertreterInnen in den Parlamenten besteht ein erhebliches Profilierungspotential, wenn Kritikpunkte der Gemeindefinanzierung klar herausgearbeitet werden können und sich daraus konkrete Verbesserungsvorschläge einbringen lassen.
 
-####3.3.4 Berichte
+#### 3.4.4 Berichte
 Dadurch, dass die Daten semantisch gespeichert sind, ist eine teil-automatischen Erstellung von Berichten möglich, zumindest, wenn es um die Erläuterung der Finanzdaten geht
 
-##4 Technologie
-###4.1 Visualisierung und Darstellung der NKF-Inhalte
+## 4 Technologie
+### 4.1 Visualisierung und Darstellung der NKF-Inhalte
 Bei den zu visualisierenden Daten des NKFs geht es um die Darstellung:
 
 1. des Vermögens (Bilanz),
@@ -147,41 +149,10 @@ Dabei gibt es mehrere Dimensionen entlang derer die Daten aggregiert werden kön
 
 1. Fachbereich – Dezernat - Gemeinde – Landkreis – Region – Bundesland - Bund
 2. Leistung - Produkt – Produktgruppe – Produktbereich – Produktfeld (Politikfeld)
-3. Struktur des Vermögens3: Bereiche – Kontenklassen – Kontengruppen - Konten
+3. Struktur des Vermögens: Bereiche – Kontenklassen – Kontengruppen - Konten
 4. Zeiträume: Tag – Woche – Monat – Jahr – Jahre
-4.2 Die Struktur der Ausgangsdaten
 
-Geht man davon aus, dass die zu visualisierenden Daten wie in den Dateien `Bilanz.txt` und `Ergebnis20XX.txt4` aufgebaut sind, dann lässt sich hierzu folgendes sagen:
-Die Datei `Bilanz.txt` hat folgende Struktur:
-
-```
-Wertfeld 1: Amtlicher Gemeindeschlüssel
-Wertfeld 2: Verwaltungsform
-Wertfeld 3: Name der Kommune
-Wertfeld 4: Signatur
-Wertfeld 5: Text der Signatur
-Wertfeld 6: Wert
-```
-Die Datei `Ergebnis20XX.txt` hat folgende Struktur:
-```
-Wertfeld 1: Amtlicher Gemeindeschlüssel
-Wertfeld 2: Verwaltungsform
-Wertfeld 3: Name der Kommune
-Wertfeld 4: Produktgruppe
-Wertfeld 5: Text der Produktgruppe
-Wertfeld 6: Konto
-Wertfeld 7: Text des Kontos
-Wertfeld 6: Wert
-```
-
-Die so zur Verfügung gestellten Daten sind für den gedachten Zweck nicht geeignet. 
-benötigt: für jede Dimension entlang derer die Daten aggregiert werden sollen, eine eigene Spalte. 
-
-| .. |  .. |
-|---|---|
-|Normalisierung | reduziert das Datenvolumen drastisch und wenn die Daten nur auf den untersten Aggregationsstufen der Dimensionen vorliegen, dann können die Daten dynamisch durch den Anwender gesteuert aggregiert werden.|
-
-###4.2 Datenbankmodell
+### 4.2 Datenbankmodell
 
 Semantisches Web und Graphdatenbanken
 
@@ -189,13 +160,13 @@ Leistungs-Kennwerte (Benchmarks)
 Vorteilhafte Marktsituation
 1. Datenquelle:
 #### 4.2.X Linked (Open) Data
-Vision von Tim Berners Lee, dem Erfinder des Internets, 
- RDF (researchable description format), 
+Vision von Tim Berners Lee, dem Erfinder des Internets,
+ RDF (researchable description format),
 Datenbankmodell semantisch orientiert
 
 DBpedia
 
-Semantische Modell gemeinsam mit den Gemeinden entwickeln?
+Semantisches Modell gemeinsam mit den Gemeinden entwickeln?
 
 Wikipedia ist Beispiel und Ansporn wie durch Kooperation und persönliches Engagement ein Werk entstehen kann, das selbst die besten und renommiertesten Lexika überflügelt hat.
 
@@ -206,13 +177,13 @@ http://www.i-views.de/de/blog/item/agile-daten
 unvollständige Daten, wie verfahren
 
 
-####4.3.1 Transparenz und Komplexitätsreduktion 
+#### 4.3.1 Transparenz und Komplexitätsreduktion
 
-> The Power of Infographics 
+> The Power of Infographics
 
 „Der Haushalt ist und bleibt das zentrale Steuerungs- und Rechenschaftsinstrument in der kommunalen Verwaltung. Künftig muss er eine Grundlage für die Outputsteuerung statt der bisherigen Inputsteuerung darstellen. Neben den Erträgen und Aufwendungen sowie die Einzahlungen und Auszahlungen als haushaltswirtschaftliche Rechengrößen kommt der Produktorientierung eine besondere Bedeutung zu. Sie zeigt sich in den Teilplänen des gemeindlichen Haushaltsplans als örtliche Steuerungsebene.“5
 
-Semantische Präsentation von Daten bedeutet, dass Informationen aus den Daten (Objekte) die Fragestellung (Prädikate) beantwortend illustrieren, und so Erkenntnisgewinn für den Betrachter (Subjekt) ermöglichen. 
+Semantische Präsentation von Daten bedeutet, dass Informationen aus den Daten (Objekte) die Fragestellung (Prädikate) beantwortend illustrieren, und so Erkenntnisgewinn für den Betrachter (Subjekt) ermöglichen.
 
 Für die Gemeinden sind folgende Fragen von Bedeutung:
 
@@ -235,21 +206,21 @@ b. Worin liegt genau der Unterschied? – Arbeitsablauf, Skaleneffekte, etc.
 
 
 ## 5 Marktlage
-### 
-#### 5.1.1 Problem: 
+###
+#### 5.1.1 Problem:
 Für Gemeinden und die öffentliche Hand ist es im Allgemeinen mit großem Aufwand verbunden, Änderungen, Erweiterunge, Verbesserungen ihrer IT umzusetzen. Das liegt an der dünnen Personaldecke und der typischerweise spezifisch nicht-IT-orientierten Amtsführung.
-#### 5.1.2 Lösung: 
-#### 5.2.1 Problem: 
+#### 5.1.2 Lösung:
+#### 5.2.1 Problem:
 Kompetenz der Gemeindeverwaltung auf regelgenaue Ausübung bedacht, ordnungspolitisch orientiert
 Damit geht ein großer Informationsverlust auf der Bilanziellen Ebene und damit Entscheidungsschwäche auf Investitions-Ebene einher
-#### 5.2.2 Lösung: 
+#### 5.2.2 Lösung:
 Informations-Dienstleister für Kommunen
 * Erträge und Aufwendungen in einen sachlogischen Zusammenhang mit den Erlösen und Kosten stellen
-* spezifischen Aufgaben, die die verschiedenen Schichten der Buchhaltung haben berücksichtigen 
+* spezifischen Aufgaben, die die verschiedenen Schichten der Buchhaltung haben berücksichtigen
 * Informationen, die für die politischen und wirtschaftlichen Entscheidungen der Gemeinden bereitstellen
 * Lebensqualität erfassen und sichtbar machen
 
-##### Negativ-Beispiele 
+##### Negativ-Beispiele
 * Selbst für eine kleine Stadt wie z.B. Heppenheim mit 25.000 Einwohner, einer Stadtverwaltung von 234 Mitarbeitern und einem Ertrag bzw. Aufwand von ca. 38 bzw. 43 Mill. Euro hat dieser Jahresbericht 580 Seiten. Er übertrifft an Seiten den Jahresbericht der der Deutschen Bank mit ca. 98.000 Mitarbeitern und einem Ertrag bzw. Aufwand von 32 bzw. 26 Mrd. Euro.
 
 * Beispielsweise werden in den Finanzplänen der Stadt Bottrop die Positionen laut Spaltenüberschrift nach Einzahlungs- und Auszahlungsarten gruppiert. Tatsächliche werden sie jedoch nach Ertrags- und Aufwandsarten gruppiert. Die Stadt Bochum vermeidet dies indem sie auf eine Spaltenüberschrift verzichtet.
@@ -302,7 +273,7 @@ Das Schaubild Kommunale Leistungsstruktur funktioniert auch entlang der Dimensio
 Mit Hilfe des einen einzigen Schaubildes Kommunale Leistungsstruktur könnte man alle Daten des NKF-Systems anzeigen und auf die 580 Seiten Papier verzichten. Und wenn ein bestimmter Sachverhalt auf Papier benötigt wird, dann kann man ihn ausdrucken.
 
 
-####6.1.2 So einfach wie möglich: Buchungsebenen beachten
+#### 6.1.2 So einfach wie möglich: Buchungsebenen beachten
 
 Die verschiedenen Ebenen in der Rechnungslegung und Verbindung die spezifischen Bedürfnisse öffentlicher Haushalte in Kohärenz bringen:
 
@@ -310,7 +281,9 @@ Die reale Welt einer Gemeinde wird aus der Sicht des Rechnungswesens in vier log
 Der sachlogische Zusammenhang ist vermutlich die Ursache, dass die Begriffe Einzahlung, Einnahmen, Ertrag und Erlöse sowie Auszahlung, Ausgaben, Aufwand und Kosten selbst in der Beschreibung des NKF-Systems nicht immer richtig verwendet werden, obwohl es sich bei den 8 Begriffen um streng voneinander zu unterscheidende Begriffe handelt.
 Aufgrund sachlicher Unterschiede zwischen den Ebenen und zeitlicher Verschiebungen ist es z.B. nicht sinnvoll Einzahlungen nach Ertragskategorien zu Gruppieren. Aber genau das, wird im NKF-System gemacht. Jede Ebene muss nach den für die Ebene spezifischen Eigenschaften gruppiert werden. Auf jeder Ebene sollten auch nur die Fragen gestellt werden, für die die Ebene aussagefähig ist.
 
-Abbildung 1: Ebenen der Buchhaltung
+
+>![Abbildung: Ebenen der Buchhaltung](/graphics/EbenenDerBuchhaltung.png)
+
 Eine ausführliche und anschauliche Erklärung der obigen Begriffe findet sich hier.
 Die Bestandsgröße zu der Einzahlungs- und Auszahlungsebene sind die liquiden Mittel, d.h. Bargeld und Sichteinlagen bei Banken. Mangelnde Liquidität ist neben der Überschuldung die häufigste Insolvenzursache. Auch wenn über Gemeinden kein Insolvenzverfahren verhängt werden kann, hat die Aufrechterhaltung der Zahlungsfähigkeit auch für Gemeinden eine sehr hohe Priorität.
 Die Zahlungen sind die Leistungen aufgrund von fälligen Forderungen und Verbindlichkeiten. Die Zeitpunkte und die Höhe der Ein- und Auszahlungen werden also durch die darüber liegende Ebene der Einnahmen und Ausgaben bestimmt.
@@ -326,7 +299,7 @@ Als zusätzliche Information könnte eine Gruppierung der Forderungen und Verbin
 #### 6.1.2 …, aber nicht einfacher: Kosten- und Leistungsrechnung
 >„Mache die Dinge so einfach wie möglich, aber nicht einfacher!“ (Einstein, *zugeschrieben*)
 
-Der Begriff **Kosten- und Leistungsrechnung** (im folgenden **KLR** abgekürzt) kommt in den 3.092 Seiten NKF-Handreichungen 117-mal vor. Es wird auch auf ihre Bedeutung hingewiesen, aber sie wird weder näher spezifiziert, noch ist ihre Einführung Pflicht. Ihr wird ergänzende und lokale Bedeutung beigemessen und in das Belieben der Bürgermeister gestellt. 
+Der Begriff **Kosten- und Leistungsrechnung** (im folgenden **KLR** abgekürzt) kommt in den 3.092 Seiten NKF-Handreichungen 117-mal vor. Es wird auch auf ihre Bedeutung hingewiesen, aber sie wird weder näher spezifiziert, noch ist ihre Einführung Pflicht. Ihr wird ergänzende und lokale Bedeutung beigemessen und in das Belieben der Bürgermeister gestellt.
 
 Die KLR bildet den wirtschaftlichen Geschäftsbetrieb einer Gemeinde ab.
 **ToDo**: Näher ausführen
@@ -342,7 +315,7 @@ Die Aufgaben der Ebene KLR sind:
 * Entscheidungsgrundlage: Die Erkenntnisse, die aus der KLR gezogen werden, könnten eine wichtige Grundlage für die Entscheidungen in den Gemeinden werden.
 
 Zusammenfassend kann also gesagt werden, dass ein Finanzmanagement-System nicht ausreicht. Gebraucht wird ein kommunales Leistungs- und Finanzmanagement-System.
-####6.1.3 Transparenz: Klare Trennung zwischen Politik und Verwaltung
+#### 6.1.3 Transparenz: Klare Trennung zwischen Politik und Verwaltung
 In der Ergebnisrechnung, d.h. auf der Aufwands- und Ertragsebene, werden politische und wirtschaftliche Faktoren miteinander vermengt und verwischt.
 Wenn z.B. für die Eintrittskarten ins Theater im Durchschnitt 20,00 € bezahlt werden und der Selbstkostenpreis jedoch bei 70,00 € liegt, dann sind die 50 € Zuschuss eine politische Entscheidung. Diese politische Entscheidung wird aber nur dann sichtbar, wenn man die Ergebnisse der Kosten- und Leistungsrechnung (KLR) mit den Ergebnissen der Ergebnisrechnung vergleicht.
 Aber selbst dieser Vergleich deckt noch nicht die ganze Wahrheit auf, weil ein Teilergebnisplan für das Produkt Theater noch Transferleistungen enthalten kann.
@@ -368,7 +341,7 @@ Erst durch die Umsetzung dieser Vorschläge könnte das NKF-System die erklärte
 Abbildung 1 Outputsteuerung durch die Lösung des Erlös-Ertrags-Problems
 (Hinweis: Bild ist in Überarbeitung.)
 
-####6.1.4 Qualität buchen: Der fehlende Baustein der Rechnungslegung
+#### 6.1.4 Qualität buchen: Der fehlende Baustein der Rechnungslegung
 (Die folgenden Ideen sind in einem sehr frühen Entwicklungsstadium.)
 Die besondere Herausforderung eines Rechnungswesens für die Kommunen ist, die angestrebten Ziele und die Qualität der Haushaltsführung sichtbar und messbar zu machen.
 Eine Bilanz ist eine Vermögensaufstellung und eine Ergebnisrechnung zeigt, wie sich das Vermögen in einer Periode verändert hat.
@@ -379,7 +352,7 @@ Die Gemeinwohlbilanz7 der Gemeinwohlökonomie versucht die Qualität wirtschaftl
 Auch Kommunen können hinsichtlich ihrer Haushaltsführung und Aufgabenerfüllung mehr oder weniger dem Gemeinwohl dienen. Wer z.B. immer nur dem billigsten Anbieter den Zuschlag gibt, sollte sich nicht wundern, wenn dieser Preisdruck zu einem Lohndumping führt. Lohndumping ist weder sozial, noch gerecht, noch trägt es zum Gemeinwohl bei.
 Das hier vorgeschlagene Gemeinwohlradar verbindet die Ideen der Gemeinwohlbilanz mit den Ideen eines Radardiagramms und einer Zielscheibe.
 
-##### 6.1.4. Vermögensrelevante Geschäftsvorfälle
+#### 6.1.4. Vermögensrelevante Geschäftsvorfälle
 In einer Buchhaltung werden vermögensrelevante Geschäftsvorfälle bewertet und gebucht und damit dokumentiert.
 Ein Buchungssatz ist im Grunde nichts anderes als eine standardisierte Aufzeichnung eines vermögensrelevanten Sachverhaltes. Das Besondere dabei ist, dass diese vermögensrelevanten Sachverhalte mit Hilfe mathematischer Funktionen zu einem Gesamtbild zusammengefasst werden können und so die Bilanz bzw. Gewinn-/Verlustrechnung ergeben.
 Erst durch die Bewertung lassen sich Vermögensrechte untereinander vergleichen und mathematisch behandeln. Ohne Bewertung könnte keine Bilanz oder Gewinn- und Verlustrechnung erstellt werden. Der Betrag auf einem Konto ist der durch Bewertung ermittelte Wert der Vermögensrechte, die auf dem Konto dokumentiert werden.
@@ -391,7 +364,7 @@ Wenn wir Unternehmen nicht nur als „Durchlauferhitzer“ für Vermögen betrac
 Wir brauchen eine Rechnungslegung, die nicht nur quantitativ das Vermögen, sondern qualitativ das gesamte Unternehmen bewertet und misst.
 
 [5.2.2]:https://stackedit.io/editor#522-digitale-infrastruktur-architektur
-####5.2.2 Digitale Infrastruktur-Architektur
+#### 6.2.2 Digitale Infrastruktur-Architektur
 
 Eine Infrastruktur-Architektur besteht aus einer möglichst einfachen und funktionalen Benutzerschnittstelle zu einm komplexen Datensystem.  
 
@@ -441,7 +414,9 @@ Zur Betrachtung und Analyse dieser Fakten können je nach Bedarf Teilräume, Sch
 Entlang der Dimensionen können die gespeicherten Daten aggregiert, ausgewertet und angezeigt werden. Die so erzeugten vielfältigen Abbildungen können als unterschiedliche Sichten auf das Vermögen, die Vermögensänderungen und betriebswirtschaftlichen Sachverhalte betrachtet werden.
 Die klassischen Bilanzen, Gewinn- und Verlustrechnungen entsprechen bestimmten Sichten. Die Restriktionen und Abbildungen für eine bestimmte Sicht können abgespeichert und bei Bedarf wiederverwendet werden.
 Aufgrund der fehlenden starren Restriktionen und Abbildungen können in der multidimensionalen Buchhaltung jede beliebige klassische Buchhaltung abgebildet werden. Voraussetzung hierfür ist, dass die hierfür notwendigen Sachverhalte abgespeichert sind.
-5.2.4.3 Trennung von Fakten und Interpretationen
+
+##### 5.2.4.3 Trennung von Fakten und Interpretationen
+
 In allen klassischen Buchhaltungssystemen werden die Geschäftsvorfälle nach bestimmten Kriterien und damit nach einer bestimmten Interpretation gebucht. Diese Kriterien sind in den Rechnungslegungsvorschriften festgelegt. Dabei entsteht zwangsläufig der Kampf um die „richtige“ Interpretation. Die Rechnungslegung nach HGB unterscheidet sich von der Rechnungslegung nach US-GAAP oder IFRS. Es macht einen erheblichen Unterschied, ob z.B. ein Gebäude nach dem Zeitwert mit z.B. 100.000 € oder nach dem aktuellen Marktwert mit 500.000 € in der Bilanz steht.
 Diese unterschiedlichen Bewertungen und damit unterschiedlichen Sichtweisen auf betriebswirtschaftliche Sachverhalte geht auch weit über den betriebswirtschaftlichen Rahmen hinaus. Die weltweite Finanzkrise 2007/2008 währe ohne die in den USA geltenden Rechnungslegungsvorschriften nicht möglich gewesen.
 Eine einzige Änderung in den Bewertungsvorschriften hätte sogar die Entstehung der Finanzkrise verhindern können: Der Wertansatz für Kreditforderungen und den daraus abgeleiteten Kreditderivate darf maximal die Höhe der Restforderung des zugrunde liegenden Kredits betragen. Eventuelle Verluste, die dadurch entstehen, dass der Kaufpreis der verbrieften Kreditforderung höher ist, als die Restforderung aus dem Kredit, werden bei der Berechnung der Steuern nicht berücksichtigt.
@@ -456,82 +431,69 @@ In der Datenbank werden nicht die Buchungen (= interpretierte Fakten), sondern n
 Die Buchungssätze sind in der multidimensionalen Buchhaltung lediglich ein Zwischenergebnis, das zur Dokumentation gespeichert werden kann.
 Durch die Trennung von Fakten und der Interpretation der Fakten können die Fakten, auch rückwirkend, nach beliebig vielen und unterschiedlichen Interpretationen bewertet werden. Diese unterschiedlichen Interpretationen können als unterschiedliche Sichten auf die Fakten verstanden werden.
 Der Streit um die „richtige“ Rechnungslegung und Bewertung wird insofern beigelegt, dass man unterschiedliche Sichtweisen zulässt.
-5.2.4.4 Dimensionen
 
-5.2.4.5 Abstrahieren – Spezialisieren – Verallgemeinern
-
+##### 5.2.4.4 Dimensionen
 
 
-ToDo: Näher erläutern und weiter ausführen.
-5.2.4.6 Abkehr von einer papiergetragenen Buchhaltung
-Der Unterschied zwischen einer papiergetragenen Buchhaltung und einer für die elektronische Datenverarbeitung konzipierten Buchhaltung sind mindestens so groß, wie der Unterschied zwischen einem Ochsenkarren und einem Flugzeug.
-Der entscheidende Vorteil und die Vereinfachung bleiben aus, wenn man eine papiergetragene Buchhaltung in der elektronischen Datenverarbeitung nachbildet, anstatt die Ideen und Funktionen der Buchhaltung mit den Mitteln der elektronischen Datenverarbeitung neu zu konzipieren.
+##### 5.2.4.5 Abstrahieren – Spezialisieren – Verallgemeinern
+
+
 Wenn die papiergetragene Buchhaltung lediglich nachgebildet wird, dann bleibt sie zum Teil ein zusätzlicher Aufwand. In einer für die elektronische Datenverarbeitung konzipierten Buchhaltung muss für EDV-gestützte Geschäftsprozesse nicht zusätzlich gebucht werden. Die Buchungssätze ergeben sich indirekt per Programm oder Zuordnungstabelle aus den Geschäftsvorfällen.
 Auch werden die Buchungssätze nicht durchgebucht, sondern virtuell erzeugt. Unter „durchbuchen“ wird hier verstanden, dass die einzelnen Buchungssätze erzeugt und in Tabellen der Datenbank abgelegt werden. Unter „virtuell erzeugen“ wird verstanden, dass die Buchungssätze einschließlich aller Auswertungen, wie z.B. Bilanz oder die Kosten- und Leistungsrechnung dynamisch aus den gespeicherten Geschäftsvorfällen erzeugt werden.
 Beim Durchbuchen gehen wichtige Strukturinformationen verloren. Darüber hinaus soll es dem Nutzer überlassen bleiben, ob z.B. die Kosten- und Leistungsrechnung für ein Produkt, eine Produktgruppe, einen Fachbereich oder für eine Region erstellt werden. Diese generelle Vorgehensweise schließt nicht aus, dass oft nachgefragte Sichten abgespeichert werden, damit sie ohne neu zu berechnen direkt angezeigt werden können.
 Bei einer virtuellen Buchhaltung können aus den gleichen primären Geschäftsvorfällen parallel Buchungsdaten nach unterschiedlichen Rechnungslegungsvorschriften erzeugt werden. Eine Gemeinde könnte z.B. ihre eigene Variante der Buchhaltung haben und gleichzeitig könnten für einen landesweiten Vergleich alle Gemeinden nach einheitlichen Rechnungslegungsvorschriften bewertet und ausgewertet werden.
-5.2.5 Synergieeffekt schaffen
+
+#### 5.2.5 Synergieeffekt schaffen
+
 Erst das Wissen, wo die entscheidenden Unterschiede in der Produktion und in den Kosten liegen, ermöglicht es den Gemeinden zu reagieren. Dazu müssen aber die relevanten Daten ohne zusätzlichen Aufwand den Sachbearbeitern und Entscheidungsträgern in ihrer tagtäglichen Arbeit zur Verfügung stehen.
 Durch die Infrastruktur-Architektur der vorgeschlagenen kommunalen Leistungs- und Finanzmanagement-Infrastruktur könnten genau dies erreicht werden. Wenn beispielsweise eine Gemeinde einen neuen Kindergarten plant, dann stehen ihr automatisch alle Unterlagen aller realisierten und in Realisierung befindlichen Kindergärten zur Verfügung. Ein Sachbearbeiter könnte diese Unterlagen nicht nur für die eigene Planung nutzen, sondern aus diesen Erfahrungen lernen und sich gegebenenfalls mit den Kollegen anderer Städte austauschen.
 Von der Planung einzelner Produkte bis zu ihrer Realisierung können so Gemeinden voneinander profitieren und lernen.
-ToDo: Weiter ausführen.
-5.2.6 Empfohlene, standardisierte und ausgewogene Verträge
-5.2.6.1 Einfach und fair zum Nutzen aller
-Empfohlene, standardisierte und ausgewogene Verträge sind ein Schlüsselbaustein für die Realisierung der KLF-Infrastruktur.
-Alle Geschäfte können über empfohlene, standardisierte und ausgewogene Vertragsvorlagen (ESA-Vertragsvorlagen) abgewickelt werden.
-ESA-Vertragsvorlagen stellen eine Art DIN-Norm für schuldrechtliche Verträge dar. Diese Vertragsvorlagen werden kooperativ entwickelt und können von der Landesregierung oder den Gemeinden zur Nutzung frei gegeben werden. ESA-Verträge sollen den Geschäftsverkehr erheblich erleichtern, fair gestaltet und die Rechtssicherheit und Rechtsdurchsetzung erheblich verbessert.
 
-Abbildung 1 Grundstruktur eines schuldrechtlichen Vertrages
-Durch die ESA-Vertragsvorlagen findet auch eine direkte und indirekte Mitgestaltung der Nutzer an der Entwicklung der KLF-Infrastruktur statt. Jeder ist berechtigt an dem gemeinsamen Prozess zur Erarbeitung der ESA-Vertragsvorlagen mitzuarbeiten, die dann von demokratisch gewählten Vertretern beschlossen werden.
-Eine ESA-Vertragsvorlage ist nur in seiner aller einfachsten Nutzung mit einer herkömmlichen Vertragsvorlage zu vergleichen. Diese Nutzungsmöglichkeit ist vorgesehen, um einen einfachen Übergang vom jetzigen System in die vorgeschlagene KLF-Infrastruktur zu ermöglichen.
-In der empfohlenen Nutzung sind eine ESA-Vertragsvorlage eher zu vergleichen mit einem absoluten Experten für diese Klasse von Verträgen und einem Vertragsmanager. Eine ESA-Vertragsvorlage ist ein Anwendungsprogramm, das den Nutzer in allen Belangen des Vertrags unterstützen und beraten kann.
-Eine ESA-Vertragsvorlage ist ein abstraktes Rechts-Pattern, mit einer internationalen und sprachübergreifenden verbindlichen und einheitlichen Interpretation.
-Unter einem Rechts-Pattern, wird in Anlehnung an Design-Patterns in der Softwareentwicklung, eine Lösung für ein rechtliches Problem oder eine Aufgabenstellung in einem bestimmten Kontext verstanden:
-1. Ein rechtliches Problem, Aufgabenstellung oder Anwendungsklasse
-2. Eine konkrete Lösung bestehend aus
-a. einer Vertragsvorlage mit allen Ansprüchen und Leistungen
-b. allen Verknüpfungen zu allen Rechtsgrundlagen,
-c. den Konsequenzen aus Leistungsstörungen und
-d. den Verbindungen zur Rechtsprechung.
-3. Die sachlichen und rechtlichen Konsequenzen aus der Lösung und eventuellen Kompromissen, die man bei der Lösung eingeht. In Ergänzung dazu sollen Hinweise auf alternative Vertragsvorlagen gemacht werden, die für den gesuchten Anwendungsfall eventuell besser geeignet sind.
-Die Vertragsvorlage bildet die Benutzerschnittstelle zu den potentiellen Vertragspartnern. Diese Benutzerschnittstelle soll klar, so einfach wie möglich, aber nicht einfacher und allgemeinverständlich sein.
-In der normalen Nutzung müssen sich die Vertragsparteien keine Gedanken über Details machen und müssen auch keine Rechtsexperten sein. Die Vertragsparteien müssen sich nur darüber einig sein, dass sie für einen bestimmten Zweck einen fairen und ausgewogenen Vertrag abschließen wollen und können darauf vertrauen, dass sie keine bessere Lösung finden werden.
-Zu jeder Vertragsvorlage gibt es eine Videoeinführung und bei Bedarf eine Online-Schulung. Für Fragen gibt es ein moderiertes Forum, an dem sich auch die zuständigen Fachgerichte beteiligen sollen. Durch diese Rückkopplung sollen die Vorlagen verbessert und weiterentwickelt werden. Von Zeit zu Zeit und bei nicht durchgreifenden Rechtsänderungen werden neue Versionen einer Vertragsvorlage bereitgestellt.
-Durch die Nutzung von ESA-Verträgen müssen weder Rechnungen gestellt, noch Zahlungen veranlasst werden. Lieferscheine, Rechnungen, Zahlungen, Mahnungen, etc. sind automatisierte Ergebnisse aus ESA-Verträgen, die von den Vertragsparteien nur noch bestätigt werden.
-Vertragsverletzungen, die das System aus dem Zahlungsfluss, den Nutzereingaben oder dem Zeitablauf erkennen kann, sollen direkt angezeigt und mögliche rechtliche Schritte per Maus-Klick eingeleitet werden können.
-In Falle eines Rechtsstreits kann sich ein Richter den streitigen Vertrag anzeigen lassen. Er bestätigt oder verwirft fallrelevante Tatsachenbehauptungen und Einlassungen der Vertragsparteien. Alle rechtlichen Aspekte sind bereits mit der ESA-Vertragsvorlage verknüpft einschließlich der dazugehörigen Rechtsprechung. Als Ergebnis erhält der Richter einen automatisch erstellten Entwurf einer Gerichtsentscheidung, die er im Regelfall nur noch unterschreiben und verkünden muss.
-Die erste Instanz eines Prozesses könnte bei einfachen Verfahren über die KLF-Infrastruktur abgewickelt werden. Dadurch sinken für alle Beteiligten die Kosten und die Prozessbeteiligten müssen nicht vor Gericht erscheinen.
-Durch ESA-Vertragsvorlagen soll sich die richterliche Tätigkeit verstärkt in die Vorbeugung von Rechtsstreiten verlagern.
-Eine Übereinstimmung in den Tatsachen soll die Rechtsfolgen implizieren. Dadurch sollen Rechtsstreitigkeiten vermieden und die Arbeit der Gerichte erheblich erleichtert werden. Jeder Geschäftspartner soll rechtsverbindlich in seinen konkreten Verträgen nachschlagen können, welche Vertragsverletzung oder Leistungsstörung welche Rechtsfolge nach sich ziehen kann.
-Die Rechtsverbindlichkeit soll dadurch erreicht werden, dass zu jeder ESA-Vertragsvorlage jede mit diesem Vertragstyp im Zusammenhang stehende Gerichtsentscheidung verbunden wird und Richter die Möglichkeit haben ihre Entscheidungsabsicht dem System bekannt zu geben. Dadurch wird einerseits die richterliche Unabhängigkeit gewahrt und anderseits den Vertragsparteien mitgeteilt was sie im Falle eines Konfliktes konkret zu erwarten haben.
-Die Möglichkeit eine Gerichtsentscheidung zu simulieren haben die Vertragsparteien genauso wie Richter. Sie bekommen auch die Kosten eines möglichen Rechtsstreites angezeigt. Dadurch sollen bereits im Vorfeld Auseinandersetzungen geklärt und Prozesse vermieden werden. Im Idealfall werden nur noch Prozesse über Grundsatzentscheidungen und zur Erlangung eines Rechtstitels für die Rechtsdurchsetzung geführt.
-Im System erstellte und gespeicherte ESA-Verträge sollen den gleichen rechtlichen Status haben wie öffentliche Urkunden. Zu allen ESA-Verträgen gibt es automatisierte amtliche Übersetzungen in allen nachgefragten Sprachen.
-ESA-Verträge werden Wirtschaft und Gesellschaft erheblich verändern. Durch ESA-Verträge wird sich der Wettbewerb von der Vertrags- auf die Leistungsebene verlagern. Allen, die bisher durch Tricks, mangelnde Sachkenntnis der Vertragspartner oder Macht über das Kleingedruckte in den Verträgen ihre Vertragspartner über den Tisch gezogen haben, wird das Handwerk gelegt.
-Allgemeine Geschäftsbedingungen sind durch ESA-Verträge weder notwendig noch wirksam, weil durch ESA-Verträge alle rechtlichen Aspekte ausgewogen abgedeckt werden und Nebenabreden explizit ausgeschlossen werden.
-5.2.6.2 Vertragsabwicklung
-Selbst die komplexesten Verträge können in einem unvorstellbar einfachen und sicheren Verfahren abgewickelt werden. Die grundsätzlich einfachste und sicherste Art einen Vertrag abzuwickeln besteht darin, dass alle Vertragsparteien ihre Leistungen und Verfügungen auf den Vertrag buchen.
-Jede ESA-Vertrags-Nummer ist gleichzeitig die Nummer eines dem Vertrag zugeordneten Treuhandkontos. Auf diesem Konto sind automatisch alle Rechte und Pflichten aus dem Vertrag gebucht.
-Anstatt Zahlungen oder Rechteübertragungen auf die entsprechenden Konten der Leistungsempfänger zu buchen, können und sollten alle Zahlungen, Rechteübertragungen oder Empfangsbestätigungen für empfangene Leistungen auf den Vertrag gebucht werden. Im Vertrag direkt wird dann in Echtzeit jedem Vertragsteilnehmer angezeigt, wer wann welche vertraglich vereinbarten Leistungen erbracht hat. Erst wenn dann alle vertraglich vereinbarten Leistungen erbracht sind, werden die Zahlungen und Rechte an den vertragsgemäßen Empfänger weitergeleitet. Falls es zu Leistungsstörungen kommt, wird der Vertrag je nach Vereinbarung abgewickelt und die auf den Vertrag geleisteten Zahlungen oder Rechteübertragungen zurück überwiesen.
-Beispielsweise kann und sollte bei einem Kauf im Internet der Rechnungsbetrag nicht auf ein Konto des Verkäufers überwiesen werden, sondern auf die Vertragsnummer. Wenn dann die Ware per Paketdienst geliefert wird, wird durch die Empfangsbestätigung über das Handterminal des Zustellers, des eigenen Handys oder am Computer, die Zahlung frei gegeben. Wenn die Ware nicht geliefert wird, dann kann die Zahlung zurück geholt werden.
-Genau so einfach könnte ein Grundstücksverkauf abgewickelt werden. Mehrere Verträge wie z.B. der Grundstückskaufvertrag und die Grundschuldbestellung können zu einer Transaktionseinheit zusammengefasst werden. Wenn Verträge zu einer Transaktionseinheit zusammengefasst werden, dann sind alle Buchungen auf diese Verträge schwebend. Erst wenn alle Voraussetzungen einer Transaktionseinheit erfüllt sind, dann werden die schwebenden Verfügungen gleichzeitig vollzogen und rechtswirksam.
-Der Grundstücksverkäufer bucht sein Eigentumsrecht am Grundstück auf den Vertrag. Damit ist automatisch eine Auflassungsvormerkung verbunden und das Grundstück kann nicht noch einmal verkauft werden. Käufer und Bank schließen einen Darlehensvertrag. Der Käufer und die finanzierende Bank buchen den Kaufpreis, Grundsteuer, etc. auf das Vertragskonto. Falls das Grundstück belastet ist, bucht die abzulösende Bank ihre Forderung und die Freigabe ihrer Grundschuld auf das Vertragskonto. Sobald dann alle Vertragsvoraussetzungen erfüllt sind und alle Vertragsbeteiligten dies bestätigt haben, wird der Vertrag vollzogen.
-Sobald Zins und Tilgung aus dem Darlehensvertrag geleistet sind, wird das Grundpfandrecht automatisch freigegeben.
-Grundstücksgeschäfte müssen zurzeit aufgrund ihrer Komplexität und der damit verbundenen Risiken über Notare abgewickelt werden und verursachen zusätzliche Kosten für die Vertragsparteien. In einer KLF-Infrastruktur in öffentlicher Hand könnten solche Verträge noch sicherer, erheblich einfacher und ohne Zusatzkosten abgewickelt werden.
-Zur Abwicklung von Verträgen werden Ideen aus Datenbankmanagementsystemen übernommen, die dort als Zwei- bzw. Drei-Phasen-Commit-Protokolle bekannt sind.
-Diese Protokolle stellen sicher, dass komplexe Transaktionen ganz oder gar nicht durchgeführt werden und gegebenenfalls bereits getätigte Leistungen und Verfügungen rückabgewickelt werden.
-Durch die ESA-Vertragsvorlage wird gesteuert, ob und welches Transaktionsprotokoll zum Zuge kommt. Für den Nutzer sind diese Protokolle weitgehend transparent. Der Nutzer wird u.U. aufgefordert empfangene Leistungen zu bestätigen und zu bestätigen oder zu widersprechen, dass alle Vertragsvoraussetzungen zum Vollzug des Vertrages vorliegen.
+### 5.3 Die Struktur der Ausgangsdaten
 
-## 7 Anlage 1: Datenbankdesign
-### 7.1 Zielsetzung Datenbankdesign
-Die Zielsetzung für das Datenbankdesign ist wie folgt:
+Geht man davon aus, dass die zu visualisierenden Daten wie in den Dateien `Bilanz2016.txt` und `Ergebnis2016.txt` aufgebaut sind, dann lässt sich hierzu folgendes sagen:
+Die Datei `Bilanz.txt` hat folgende Struktur:
+
+```
+Wertfeld 1: Amtlicher Gemeindeschlüssel
+Wertfeld 2: Verwaltungsform
+Wertfeld 3: Name der Kommune
+Wertfeld 4: Signatur
+Wertfeld 5: Text der Signatur
+Wertfeld 6: Wert
+```
+Die Datei `Ergebnis20XX.txt` hat folgende Struktur:
+```
+Wertfeld 1: Amtlicher Gemeindeschlüssel
+Wertfeld 2: Verwaltungsform
+Wertfeld 3: Name der Kommune
+Wertfeld 4: Produktgruppe
+Wertfeld 5: Text der Produktgruppe
+Wertfeld 6: Konto
+Wertfeld 7: Text des Kontos
+Wertfeld 6: Wert
+```
+
+Die so zur Verfügung gestellten Daten sind für den gedachten Zweck nicht geeignet.
+benötigt: für jede Dimension entlang derer die Daten aggregiert werden sollen, eine eigene Spalte.
+
+| .. |  .. |
+|---|---|
+|Normalisierung | reduziert das Datenvolumen drastisch und wenn die Daten nur auf den untersten Aggregationsstufen der Dimensionen vorliegen, dann können die Daten dynamisch durch den Anwender gesteuert aggregiert werden.|
+
+
+## 5.4 Datenbankdesign
+### 7.4.1 Zielsetzung Datenbankdesign
+
 Visualisierung NKF-Daten: Die Datenbank soll so gestaltet sein, dass damit die Visualisierung der Leistungsstruktur der NKF-Daten als Benutzerinterface durchgeführt werden kann.
 Multi-NKF fähig: Die NKF-Daten können sowohl in der Rechnungslegungsvariante einer bestimmten Kommune als auch in einer kommunenübergreifenden einheitlichen Sicht dargestellt werden.
 Multiple Rechnungslegung: Die Datenbank wird so strukturiert, dass damit die NKF-Daten nach unterschiedlichen Rechnungslegungsstandards angezeigt werden können. Die unterschiedlichen Sichten sollen auch rückwirkend möglich sein, wenn die Daten in der Struktur der Standardschnittstelle importiert wurden.
 Das NKF ist ein Beispiel für einen bestimmten Rechnungslegungsstandard. Dadurch wird die Möglichkeit geschaffen, dass auch andere Bundesländer mit deutlich abweichenden Systemen integriert werden können, oder z.B. die NKF-Daten aus der Sicht der Kameralistik gezeigt werden könnten.
 Konkret implementiert wird nur der NKF-Standard, der als Ausgangspunkt und Beispiel für andere Rechnungslegungsstandards verwendet werden kann.
-Die Datenbank wird so strukturiert, dass sie als Grundlage für das operative System der Phase 2 verwendet werden kann.
-Um diese Ziele zu erreichen werden die Daten in einer Art universellen Buchhaltung dokumentiert.
-### 7.2 Grundstruktur der Datenbank
+Die Datenbank wird so strukturiert, dass sie als Grundlage für das operative System der Phase 2 verwendet werden kann. Um diese Ziele zu erreichen werden die Daten in einer Art universellen Buchhaltung dokumentiert.
+
+### 7.4.2 Grundstruktur der Datenbank
+
 Buchhaltungen dokumentieren vermögensrelevante Geschäftsvorfälle in Form von Buchungssätzen.
 Die entscheidende Idee für die Grundstruktur der Datenbank ist, dass nicht die Buchungssätze, sondern die Geschäftsvorfälle selbst in einer universellen Form gespeichert werden.
 Dadurch wird es möglich, dynamisch anhand von formalisierter Rechnungslegungsvorschriften jede beliebige Rechnungslegung zu generieren.
@@ -574,35 +536,35 @@ Dieser Mechanismus ist besonders für fortschreitende Planungsstände hilfreich.
 Gegebenenfalls müssen Beträge und Mengen auf 0 gesetzt werden, wenn durch die Stornierung Werte nicht geändert, sondern gelöscht werden sollen.
 
 
-| Spaltenbezeichnung| | Bemerkung| 
-| Englisch| Deutsch | | | 
+| Spaltenbezeichnung| | Bemerkung|
+| Englisch| Deutsch | | |
 |-- |-- |-- |--|  
-| client| Mandant| Fremdschlüssel Mandant / Kommune| 
-| booking_date| Buchungsdatum| Dieses Datum entscheidet in welches Haushaltsjahr/-periode der Geschäftsvorfall gehört.| 
-| data_type| Datentyp| 0=Ist-Daten, Plan-Daten = 10-99, Template-Daten = 100| 
-| transaction| Geschäftsvorfall| FS: Art des Geschäftsvorfalles| 
-| cause| Rechtsgrund| FS: Rechtsgrund für die Leistung: Vertragsart, § Leistungs- oder Steuergesetz| 
-| contract| Vertrag| FS Referenz zu konkreten Verträgen oder Vertragstypen| 
-| inventory| Bestand| FS: Bestands-, Inventar-Nr. der Leistungsquelle. Z.B. Bürogebäude| 
-| begin| Beginn| Leistungsbeginn| 
-| end| Ende| Leistungsende| 
-| quantity| Menge| Leistungsmenge| 
-| unit| Maßeinheit| der Leistungsmenge: Stk., kg, cbm, qm, €, etc. oder Fremdwährung| 
-| product| Produkt| FS: Leistungs-/Produktschlüssel| 
-| valuation| Wertansatz| z.B. Marktpreis, Durchschnittspreis, Selbstkostenpreis, festgesetzter Preis, Nominalwert| 
-| amount| Betrag| Netto-Betrag| 
-| tax| Steuern| Steuern, die dem Geschäftsvorfall direkt zugeordnet werden können, wie z.B. die MwSt.| 
-| currency| Währung| Währungseinheit für Netto-Betrag und Steuern| 
-| provider| Leistungserbringer| Fremdschlüssel Leistungserbringer bzw. Orga-Einheit des Leistungserbringers.| 
-| recipient| Leistungsempfänger| Fremdschlüssel Leistungsempfänger bzw. Orga-Einheit des Leistungsempfänger| 
-| beneficiary| Begünstigte/r| falls abweichend vom Leistungsempfänger. Die Begünstigten können auch Gruppen, wie z.B. Schüler sein.| 
-| beneficiary_count| Anzahl Begünstigte| Falls die Begünstigten z.B. mehrere Schüler sind, dann kann hier die Anzahl der Schüler eingetragen werden.| 
-| project| Projekt / Produkt| Projekt-/Produkt-ID, falls eine Leistung direkt einem Projekt oder Produkt zugeordnet werden kann. Für Direktkostenrechnung.| 
-| right| Subjektives Recht| Art des übertragenen Vermögensrechts: Eigentumsrechte, Beteiligungsrechte, Nutzungsrecht, Forderungen/Verbindlichkeiten| 
-| cancellation_from| Storno von| Fremdschlüssel zu einer Transaktion T1, die von dieser Transaktion T2 storniert wird.| 
-| cancellation_to| Storno an| Fremdschlüssel zu einer Transaktion T2, die diese Transaktion T1 storniert. Durch die Storno-Einträge sollen Stornierungen möglich gemacht werden und gleichzeitig sollen alte Auswertungen anhand des Erfassungsdatums jederzeit wieder hergestellt werden. Dieser Mechanismus ist besonders für fortschreitende Planungsstände hilfreich. Gegebenenfalls müssen Beträge und Mengen auf 0 gesetzt werden, wenn durch die Stornierung Werte nicht geändert, sondern gelöscht werden sollen.| 
-| entry_date| Erfassungsdatum| Zeitstempel, wann der Geschäftsvorfall erfasst wurde.| 
-| entered_by| Erfasser| Fremdschlüssel des Erfassers| 
+| client| Mandant| Fremdschlüssel Mandant / Kommune|
+| booking_date| Buchungsdatum| Dieses Datum entscheidet in welches Haushaltsjahr/-periode der Geschäftsvorfall gehört.|
+| data_type| Datentyp| 0=Ist-Daten, Plan-Daten = 10-99, Template-Daten = 100|
+| transaction| Geschäftsvorfall| FS: Art des Geschäftsvorfalles|
+| cause| Rechtsgrund| FS: Rechtsgrund für die Leistung: Vertragsart, § Leistungs- oder Steuergesetz|
+| contract| Vertrag| FS Referenz zu konkreten Verträgen oder Vertragstypen|
+| inventory| Bestand| FS: Bestands-, Inventar-Nr. der Leistungsquelle. Z.B. Bürogebäude|
+| begin| Beginn| Leistungsbeginn|
+| end| Ende| Leistungsende|
+| quantity| Menge| Leistungsmenge|
+| unit| Maßeinheit| der Leistungsmenge: Stk., kg, cbm, qm, €, etc. oder Fremdwährung|
+| product| Produkt| FS: Leistungs-/Produktschlüssel|
+| valuation| Wertansatz| z.B. Marktpreis, Durchschnittspreis, Selbstkostenpreis, festgesetzter Preis, Nominalwert|
+| amount| Betrag| Netto-Betrag|
+| tax| Steuern| Steuern, die dem Geschäftsvorfall direkt zugeordnet werden können, wie z.B. die MwSt.|
+| currency| Währung| Währungseinheit für Netto-Betrag und Steuern|
+| provider| Leistungserbringer| Fremdschlüssel Leistungserbringer bzw. Orga-Einheit des Leistungserbringers.|
+| recipient| Leistungsempfänger| Fremdschlüssel Leistungsempfänger bzw. Orga-Einheit des Leistungsempfänger|
+| beneficiary| Begünstigte/r| falls abweichend vom Leistungsempfänger. Die Begünstigten können auch Gruppen, wie z.B. Schüler sein.|
+| beneficiary_count| Anzahl Begünstigte| Falls die Begünstigten z.B. mehrere Schüler sind, dann kann hier die Anzahl der Schüler eingetragen werden.|
+| project| Projekt / Produkt| Projekt-/Produkt-ID, falls eine Leistung direkt einem Projekt oder Produkt zugeordnet werden kann. Für Direktkostenrechnung.|
+| right| Subjektives Recht| Art des übertragenen Vermögensrechts: Eigentumsrechte, Beteiligungsrechte, Nutzungsrecht, Forderungen/Verbindlichkeiten|
+| cancellation_from| Storno von| Fremdschlüssel zu einer Transaktion T1, die von dieser Transaktion T2 storniert wird.|
+| cancellation_to| Storno an| Fremdschlüssel zu einer Transaktion T2, die diese Transaktion T1 storniert. Durch die Storno-Einträge sollen Stornierungen möglich gemacht werden und gleichzeitig sollen alte Auswertungen anhand des Erfassungsdatums jederzeit wieder hergestellt werden. Dieser Mechanismus ist besonders für fortschreitende Planungsstände hilfreich. Gegebenenfalls müssen Beträge und Mengen auf 0 gesetzt werden, wenn durch die Stornierung Werte nicht geändert, sondern gelöscht werden sollen.|
+| entry_date| Erfassungsdatum| Zeitstempel, wann der Geschäftsvorfall erfasst wurde.|
+| entered_by| Erfasser| Fremdschlüssel des Erfassers|
 
 Tabelle : Geschäftsvorfälle (business transactions)
 
@@ -614,17 +576,17 @@ Dabei sollte die Zuordnung so tief wie möglich ansetzen, damit bei der Kostenre
 
 Tabelle persons (legal_entities) – natürliche und juristische Personen und Gruppen von Personen
 | Spalte| Deutsche Bezeichnung| Datentyp| Bemerkung|
-|-- | --| --| --| 
-| id| Personen-ID| varchar| Primärschlüssel Rechtssubjekt| 
-| person_kind| Art| int| | 
-| person_name| Name| varchar| Je nach Art wird der Name unterschiedlich unterteilt.| 
-| person_begin| Beginn, Geburtsdatum, Gründungsdatum| datetime| | 
-| person_end| Ende, Totestag, Auflösungstag| datetime| | 
+|-- | --| --| --|
+| id| Personen-ID| varchar| Primärschlüssel Rechtssubjekt|
+| person_kind| Art| int| |
+| person_name| Name| varchar| Je nach Art wird der Name unterschiedlich unterteilt.|
+| person_begin| Beginn, Geburtsdatum, Gründungsdatum| datetime| |
+| person_end| Ende, Totestag, Auflösungstag| datetime| |
 
 
 
 |Dimension|Ausprägung (verfeinern <> aggregieren|
-|-- |-- | 
+|-- |-- |
 |1. Güter|Leistung - Produkt – Produktgruppe – Produktbereich – Produktfeld (Politikfeld)|
 |2. Rechtssubjekt|Fachbereich – Dezernat – Gemeinde – (Land-)Kreis – Region – Bundesland - Bund|
 |3. Zeit|Datum+Uhrzeit – Tag – Woche – Monat – Jahr – Jahre|
@@ -639,26 +601,12 @@ Die fünf Dimensionen Güter, Rechtssubjekt, Zeit, Wertansatz und Vermögen bild
 Wie im Folgenden gezeigt werden wird, kann jede beliebige Rechnungslegung als Schnitte, Projektionen und Teilmengen dieses 5-dimensionalen Buchungsraumes betrachtet werden.
 Durch die Strukturierung der Daten in diese Dimension wird es möglich, dynamisch unterschiedliche Rechnungslegungssysteme darzustellen. Eine bestimmte Rechnungslegung kann als eine bestimmte Betrachtungsperspektive aufgefasst werden.
 
-# Glossar
-
-Unter **Güter** werden hier alle Mittel verstanden, die der Bedürfnisbefriedigung dienen. Güter werden weiter in Waren und Dienstleistungen unterteilt.
-
-Der **Output** einer Gebietskörperschaft sind die Güter, die die Gebietskörperschaft für ihre Bürger erstellt, zur Verfügung gestellt oder geleistet werden. (Reisepässe, Kindergartenplätze, die Nutzung des Straßennetzes einer Gemeinde, Trauungen, bereitgestellte km Straßennetz pro Straßenkategorie (in Bezug auf Verkehrsaufkommen), etc. pp.)
-
-Der bewertete Output einer Periode wird **Leistung** genannt. Die Bewertung des Outputs erfolgt jeweils zu Selbstkostenpreisen und zu Marktpreisen. 
-
-Die Passgebührenordnung macht die Gebühr vom Alter des Antragsstellers abhängig und kostet 37,50 € bzw. 59,00 €. Der Selbstkostenpreis könnte ganz anders sein.
-Als Input einer Gebietskörperschaft werden alle Güter verstanden, die die Gebietskörperschaften von Dritten erhalten.
-Bewerteter Inputverbrauch einer Periode wird Kosten genannt. Die Bewertung kann z.B. zu Beschaffungskosten oder Durchschnittspreisen erfolgen.
-
-Sinn und Zweck des Leistungs- und Finanzmanagements einer Gemeinde ist den geplanten bzw. von den Bürgern gewünschten Output so kostengünstig und nachhaltig wie möglich zu erstellen.
-
-### 7.4 Dimension Rechtssubjekt (Raum) (Wer? / Wo?)
+### 5.5 Dimension Rechtssubjekt (Raum) (Wer? / Wo?)
 Die Güter, die eine Kommune erstellt, beziehen sich fast ausschließlich auf den geografischen Raum der Kommune.
 Die Rechtssubjektdimension bietet daher zwei gleichwertige Interpretationen. Zum einen wird der geographische Raum abgebildet und zum andern die entsprechenden Gebietskörperschaften als Rechtssubjekte,  Teil eines Rechtssubjektes oder Gruppen von Rechtssubjekten, die Vermögen haben und Leistungen empfangen oder erbringen.
 Darüber hinaus besteht die Möglichkeit der Erweiterung auf gemeinnützig tätige Gruppen und Vereine, damit eine ganzheitliche Sicht staatlichen und gemeinnützigen Handelns und Wirkens ermöglicht wird.
 
-#### 7.4.1 Geographischer Raum
+#### 5.5.1 Geographischer Raum
 Die geographischen Gebiete bekommen auf der untersten Ebene eine eindeutige Bezeichnung. Danach können die Gebiete nach Belieben hierarchisch zu größeren Gebieten zusammengefasst werden.
 Da sich durch Verwaltungsreformen Gebietsgrenzen verschieben können, werden die Hierarchien mit einem Beginn- und Enddatum versehen. Der dadurch angegebene Zeitraum begrenzt die offizielle Geltungsdauer der Hierarchie. Durch den Vergleich unterschiedlicher Hierarchien könnten so die Auswirkungen von Gebietsreformen nachvollzogen werden.
 
@@ -667,7 +615,7 @@ Auf der Basis der Standard-Hierarchie lassen sich dann beliebige weitere Hierarc
 
 Die Hierarchien bieten Möglichkeiten wie die Daten verfeinert oder aggregiert werden können.
 
-#### 7.4.3 Externer Effekte berücksichtigen
+#### 5.5.3 Externe Effekte berücksichtigen
 Die Güter für ihre Bürger können direkt durch die Gebietskörperschaften oder indirekt z.B. über Vereine geleistet werden.
 Beispielsweise könnte ein öffentliches Schwimmbad durch die Stadt direkt oder einen Verein indirekt betrieben werden. In beiden Fällen erhalten die Bürger das gleiche Gut: Die Nutzung des Schwimmbades.
 Zieht man in die Haushaltsbetrachtungen nur die direkten Leistungen der Gemeinden in Betracht, dann entstehen aus der Sicht der Buchhaltung Aufwand (= Zuschuss für den Schwimmbadverein), dem keine Leistungen an die Bürger gegenüber steht.
@@ -679,7 +627,7 @@ Technisch gesehen ist es für das System egal, ob das erfasste Rechtsubjekt eine
 Diese Erweiterung bietet somit die Möglichkeit externe Effekte staatlichen Handelns sichtbar und messbar zu machen. Die Wirkung externer Effekte können so bei politischen Entscheidungen berücksichtigt werden.
 So könnten z.B. höhere Kosten für Jugendförderung und Bildungsausgaben durch prognostizierte geringere Sozialkosten begründet und später überprüft werden.
 
-### 7.5 Dimension Zeit (Wann?)
+### 5.5.5 Dimension Zeit (Wann?)
 Alles Handeln und somit auch die Produktion von Gütern findet in der Zeit statt.
 Betrachtungen entlang der Zeitachse zeigen den Leistungsfluss und die Entwicklung des Vermögens und führen z.B. zur Ergebnisrechnung. Betrachtungen zu einem bestimmten Stichtag zeigen z.B. den Stand des Vermögens und führen zur Bilanz.
 In einem operativen System könnte man den Leistungsfluss und die Vermögensverfügungen zeitlich beliebig genau darstellen.
@@ -691,7 +639,9 @@ Das Verfahren der Bewertung entscheidet im Rechnungswesen darüber, mit welchem 
 Nichts hat einen Wert an und für sich. Alles bekommt einen Wert erst durch ein bestimmtes Bewertungsverfahren. Ein Stück bemaltes Papier, das für die einen entartete Kunst ist und verbrannt gehört, ist für andere mehrere Millionen Euro wert.
 Im wirtschaftlichen Kontext gibt es allerdings ein paar naheliegende Bewertungsmaßstäbe. Dazu zählen der Marktpreis, die fortgeführten Anschaffungs-, Herstellungs- oder Wiederbeschaffungskosten.
 Unterschiedliche Rechnungslegungssysteme unterscheiden sich insbesondere auch durch ihre unterschiedlichen Bewertungsrichtlinien.  Der „Fair Value“ (= Zeitwert, Marktwert) in einer IFRS-Bilanz für ein bestimmtes Gebäude könnte z.B. 10 Mill. € betragen. Das gleiche Gebäude könnte in einer Bilanz nach dem HGB nur 1 Mill. € angesetzt sein. Der Anschaffungswert dieses Gebäudes könnte 4 Mill. € betragen haben.
-### 7.7 Dimension Vermögen
+
+### 5.5.7 Dimension Vermögen
+
 Alle Güter einschließlich deren Produktion und Verteilung haben einen rechtlichen Aspekt.
 Die bewertbaren Rechte und Pflichten, die einem Rechtsubjekt zugeordnet sind, nennt man Vermögen.
 Als Aktiva bezeichnet man die bewertbaren Rechte, wie z.B. Eigentum (= Rechte an Sachen), Immaterialgüterrechte, Beteiligungen, Forderungen und Geld.
@@ -700,7 +650,7 @@ Als Passiva bezeichnet man die bewertbaren Pflichten, wie z.B. Verbindlichkeiten
 Geld – Forderungen/Verbindlichkeiten – Umlaufvermögen – Anlagevermögen
 Änderung
 
-Den Begriff Gemeinde weiter denken: Die Arbeit der Vereine in die Rechnungslegung einbeziehen. 
+Den Begriff Gemeinde weiter denken: Die Arbeit der Vereine in die Rechnungslegung einbeziehen.
 
 > Nicht die Gemeinde hat am besten gewirtschaftet, die in ihrer Bilanz einen möglichst hohen Gewinn ausweist, sondern die Gemeinde, die im Rahmen ihrer Möglichkeiten sparsam, wirtschaftlich und nachhaltig ihre Aufgaben erfüllt.
 
@@ -710,7 +660,8 @@ Open Source ist hierfür ein Beispiel: Einmal Kosten und dann unbeschränkter Nu
 Wir können zeigen, dass gemeinwohlorientiertes, nachhaltiges und gerechtes Wirtschaften nicht auf Kosten der Effizienz und Leistungsfähigkeit möglich, und sogar dem Paradigma Wachstum und Profit auf Kosten Anderer überlegen ist
 
 
-### 8.11 Teil-Bereiche einer kommunalen Rechnungslegung
+### 5.11 Teil-Bereiche einer kommunalen Rechnungslegung
+
 Neben den bisher diskutierten Ebenen/Bereiche könnte überlegt werden, ob nicht folgende Teil-Bereiche separat ausweisbar sein sollten:
 1. Leistungserstellung (Produkterstellung)
 2. Steuern und Abgaben
@@ -724,19 +675,6 @@ Bei z.B. Steuerforderungen gibt es keine Restlaufzeit. Solange sie nicht fällig
 
 In der Finanzstatistik wird auch nicht ausgewiesen, wie hoch die dubiosen Forderungen sind und es gibt auch kein Aufwandskonto, das die Abschreibungen auf z.B. Steuerforderungen erfasst. Es gibt zwar ein Aufwandskonto Abschreibungen auf Finanzanlagen, aber Steuerforderungen, Gebührenforderungen, etc. sind keine Finanzanlagen.
 
-
-### 8.12 Eigenkapital
-Sollte der Begriff Eigenkapital in der Gemeindebilanz nicht durch den Begriff Gemeindekapital ersetzt werden, weil es zu diesem Kapital keine Eigentümer gibt.
-### 8.13 Verschuldung
-Die Verschuldung sollte auf allen Ebenen separat ausgewiesen werden und auch für sich gezeigt werden können.
-Fragestellungen: Welche Belastung stellt die Verschuldung dar und welche Auswirkungen hat sie?
-
-###11.1 Datenhierarchien
-Die Ziele des NKFs nach z.B. Produktorientierung, Nachhaltigkeit und Transparenz sind genau richtig. Um aber im Sinne dieser Ziele vorgehen zu können, müsste die Produkthierarchie mit der Gliederung der Rechnungslegung abstimmt werden können, damit in einem Drill-Down von der Gemeindeebene über die Produktbereiche und Produktgruppen auf die Produkte zugegriffen werden kann. Aufgrund dessen, was ich in den NKF-Handreichungen gelesen habe, scheint auch diese Hierarchiebildung beabsichtigt zu sein.
-
-### Negativbeispiel: Hierarchien in Matrixstruktur
-
-Die Folge sind riesige Tabelle, die wenig relevante Daten enthalten. Beispielsweise hat die Tabelle 71147-14i (Auszahlungen nach Gemeinden x Auszahlungskonten x Produktgruppen = 442 x 153 x 87) pro Jahr über 5,8 Mill. Zeilen – aber weniger als 10% der Zeilen enthalten Informationen.
 
 ### 11.2 Erkenntnisgewinn der Auszahlungskonten
 
@@ -753,7 +691,7 @@ Eine zusätzliche Aufteilung dieser Buchungssätze nach Produkten und den sog. A
 Beispiel:
 Im Jahr 2010 betrug für Wiesbaden der Saldo des Ertragskonto Grundsteuer B 133.120.539,00 €. Auf dem entsprechenden Zahlungseingangskonto Grundsteuer B betrug der Saldo 132.796.774,00 €. Die Differenz beträgt 0,2% und ist der Saldo aus verspäteten Zahlungen der Vorjahre und noch nicht geleisteten, aber fällige Zahlungen des laufenden Jahres.
 
-###11.4 Sprachlich und fachlich klare, einheitliche und präzise Bezeichnungen der Konten
+### 11.4 Sprachlich und fachlich klare, einheitliche und präzise Bezeichnungen der Konten
 
 Beispiel: Immaterielle Vermögensgegenstände anstatt Immaterielle Güter oder Immaterialgüter
 
@@ -762,13 +700,15 @@ Der Zusatz ist auch nicht einheitlich, weil es an anderer Stelle z.B. Anlage- od
 Der Zusatz ist auch fachlich nicht korrekt, weil eine Bilanz eine Vermögensaufstellung und keine Inventarliste ist. Die Wertansätze beziehen sich also auf die bewertbaren subjektiven Rechte (= Vermögen) und nicht auf die Dinge, auf die sich diesen Rechten beziehen.
 Auch wenn der Begriff „Immaterieller Vermögensgegenstand“ im Buchhaltungskontext geläufig ist, bleibt er sprachlich und fachlich falsch und sollte durch die korrekte Bezeichnung „Immaterielle Güter“ ersetzt werden. Auch im englischsprachigen Raum spricht man von „intangible assets“ und nicht „intangible asset items“.
 Streng fachlich betrachtet ist Vermögen grundsätzlich immateriell, weil Vermögen die subjektiven Rechte sind und nicht die damit verbundenen Sache, wie z.B. ein konkretes bebautes Grundstück. In der Bilanz seht im Falle eines bebauten Grundstückes der Wert des Eigentumsrechtes (= Vermögen) und nicht der Wert des realen bebauten Grundstückes.
+
 ###11.5 Überflüssige Zusätze weg lassen
+
 Eine Bilanz ist eine Stichtagsbetrachtung und daher sollten sich alle Daten der Bilanz auf den 31.12. des entsprechenden Jahres beziehen.
 Alle Wertansätze der Bilanz beziehen sich auf den Buchwert.
 Zusätze wie Buchwert am 31.12. des Haushaltsjahres können daher entfallen.
 Wenn für weitergehende Informationen, wie z.B. bei der Entwicklung des Anlagevermögens die Anschaffungs-/Herstellungskosten oder der Anfangsbestand ausgewiesen werden, dann genügt hier ein entsprechender Zusatz.
 
-###11.6 Wertansätze
+### 5.5.9 Wertansätze
 Die Wertansätze in der Gemeindebilanz unterliegen nicht den Interessenskonflikten, die sich bei Unternehmen aufgrund der Besteuerung und dem Vorsichtsprinzip ergeben. Weder werden Gewinne ausgeschüttet noch versteuert und auch eine Liquidation des Gemeindevermögens ist ausgeschlossen. Daher könnten Aspekte der Transparenz, Vergleichbarkeit und Bilanzwahrheit stärker beachtet werden.
 Im Kontext von Kommunen und mit Hinblick auf Transparenz und Aussagefähigkeit sollten die Wertansätze überdacht werden.
 Zunächst scheint es sinnvoll zu sein, dass beim Anlagevermögen nicht nur der Buchwert, sondern auch die Anschaffungs-/Herstellungskosten ausgewiesen werden.
@@ -779,7 +719,9 @@ Bezogen auf das Anlagevermögen werden nicht zukünftige Werte an die Gegenwart 
 Ein so gebildeter Vergleichswert würde in der Tendenz bei Gebäude dazu führen, dass es zu Zu- und nicht zu Abschreibungen kommt,
 Möglicherweise wären der Wiederbeschaffungs- oder Marktwert die besseren Ansätze.
 Dabei muss man nicht ausschließen, dass auf entsprechenden Unterkonten auch die Herstellungskosten ausgewiesen werden und sich die unterschiedlichen Wertansätze gegenseitig ableiten lassen.
-###11.7 Abgrenzungen und Begriffswahl
+
+### 5.5.10 Abgrenzungen und Begriffswahl
+
 Teilweise ist schwer zu erkennen, nach welchen Kriterien und zu welchem Zweck die Verfeinerung von Bilanzpositionen vorgenommen wurde.
 Beispiel: Finanzanlagen:
 1. Anteile an verbundenen Unternehmen
@@ -836,7 +778,7 @@ Bei der bisherigen Gliederung der Position 2 fängt man nutzungsorientiert an, a
 
 Eine nutzungs- bzw. produktbereichsorientierte Gliederung könnte wie folgt aussehen:
 
-2. Gebäude  (mit kommunaler Nutzung)
+2. Gebäude (mit kommunaler Nutzung)
     2.1. Kinder- und Jugendeinrichtungen
     2.2. Schulen 
     2.3. Krankenhäusern 
@@ -856,7 +798,7 @@ Eine nutzungs- bzw. produktbereichsorientierte Gliederung könnte wie folgt auss
 
 Die Trennung zwischen Gebäuden mit und ohne kommunaler Nutzung ist in sofern wichtig, weil Gebäude ohne kommunale Nutzung veräußert werden können, ohne die Leistungen der Gemeinde einzuschränken. Nicht kommunal genutztes Vermögen ist eine Art Reserve für schlechte Zeiten.
 
-##### 12.1.1. Leistungen
+#### 5.5.11 Leistungen
 
 Meine Anregung wäre, dass Sie in ihrem Leistungskatalog die primären Leistungsempfänger in einer eigenen Spalte klar kennzeichnen. Damit könnte man den Leistungsstrom besser erkennen.
 
@@ -871,16 +813,28 @@ Im zweiten Fall können die Leistungen nicht mehr verglichen werden. Die Kommune
 könnte im Vergleich zu einer Kommune B, die einen oder mehrere dieser Punkte vernachlässigt, erheblich geringere Kosten haben. - Trotzdem würde in der Rechnungslegung im 2. Fall der Eindruck entstehen, dass die Kommune B mehr Leistungen für ihre Bürger erbringt, als die Kommune A.
 
 
-##### 12.1.2 Leistungsspezifikation
+#### 5.5.12 Leistungsspezifikation
 Leistungsspezifikationen öffentlicher Leistungen sind die wesentlichen Eigenschaften einer Leistung, nach denen die Leistung gemessen werden kann und ein zugeordneter Gewichtungsfaktor, mit wessen Hilfe ähnliche Leitungen gruppiert werden können.
 
 Produktorientierte Teilfinanzpläne sind kein Feature der kaufmännischen Buchführung, sondern der Kameralistik:
 - keine Kosten- und Leistungsrechnung,
 - keine Zuordnung der anteiligen Erträge aus Steuern für die Produkte.
 
-## Neue Finanzpositionen
+#### 5.5.13 Neue Finanzpositionen
 
-### Veräußerung von Vermögensgegenständen und Finanzanlagen 
-(führen zu Einzahlungen)
-### Außerordentliche Aufwendungen 
-z.B. für Naturkatastrophen (führen zu Auszahlungen)
+- Veräußerung von Vermögensgegenständen und Finanzanlagen (führen zu Einzahlungen)
+- Außerordentliche Aufwendungen, z.B. für Naturkatastrophen (führen zu Auszahlungen)
+
+# Glossar
+
+Unter **Güter** werden hier alle Mittel verstanden, die der Bedürfnisbefriedigung dienen. Güter werden weiter in Waren und Dienstleistungen unterteilt.
+
+Der **Output** einer Gebietskörperschaft sind die Güter, die die Gebietskörperschaft für ihre Bürger erstellt, zur Verfügung gestellt oder geleistet werden. (Reisepässe, Kindergartenplätze, die Nutzung des Straßennetzes einer Gemeinde, Trauungen, bereitgestellte km Straßennetz pro Straßenkategorie (in Bezug auf Verkehrsaufkommen), etc. pp.)
+
+Der bewertete Output einer Periode wird **Leistung** genannt. Die Bewertung des Outputs erfolgt jeweils zu Selbstkostenpreisen und zu Marktpreisen.
+
+Die Passgebührenordnung macht die Gebühr vom Alter des Antragsstellers abhängig und kostet 37,50 € bzw. 59,00 €. Der Selbstkostenpreis könnte ganz anders sein.
+Als Input einer Gebietskörperschaft werden alle Güter verstanden, die die Gebietskörperschaften von Dritten erhalten.
+Bewerteter Inputverbrauch einer Periode wird Kosten genannt. Die Bewertung kann z.B. zu Beschaffungskosten oder Durchschnittspreisen erfolgen.
+
+Sinn und Zweck des Leistungs- und Finanzmanagements einer Gemeinde ist den geplanten bzw. von den Bürgern gewünschten Output so kostengünstig und nachhaltig wie möglich zu erstellen.
