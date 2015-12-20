@@ -10,9 +10,27 @@ Caveat:  Name in Findung: iNKF, NKF+, KLF werden synonym verwendet
 ```
 
 [TOC]
+[toc]
+__TOC__
 
-* auto-gen TOC:
-{:toc}
+- [1. Mission](#1-mission)
+  - [**Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**](#brger-zur-haushaltskompetenz-ihrer-stadt-oder-gemeinde-befhigen)
+- [2 Zielstellung](#2-zielstellung)
+  - [2.1  Phase 1: Visualisierung der NKF-Inhalte](#21--phase-1-visualisierung-der-nkf-inhalte)
+  - [2.2 Phase 2: iNKF-Studio -- Kommunale Finanz-Management-Software](#22-phase-2-inkf-studio----kommunale-finanz-management-software)
+  - [3. Probleme von Kameralistik und herkömmlichem NKF](#3-probleme-von-kameralistik-und-herkmmlichem-nkf)
+    - [3.4  Übergeordnete Ziele](#34--bergeordnete-ziele)
+  - [4 Technologie](#4-technologie)
+    - [4.1 Visualisierung und Darstellung der NKF-Inhalte](#41-visualisierung-und-darstellung-der-nkf-inhalte)
+    - [4.2 Digitale Infrastruktur-Architektur](#42-digitale-infrastruktur-architektur)
+  - [5 Marktlage](#5-marktlage)
+    - [](#)
+  - [6. Technische Details](#6-technische-details)
+    - [6.1 Buchhaltung](#61-buchhaltung)
+    - [5.3 Die Struktur der Ausgangsdaten](#53-die-struktur-der-ausgangsdaten)
+  - [7.4 Datenbankdesign](#74-datenbankdesign)
+- [Glossar](#glossar)
+
 
 ### 1. Mission
 
