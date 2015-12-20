@@ -14,21 +14,20 @@ Caveat:  Name in Findung: iNKF, NKF+, KLF werden synonym verwendet
 __TOC__
 
 - [1. Mission](#1-mission)
-  - [**Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**](#brger-zur-haushaltskompetenz-ihrer-stadt-oder-gemeinde-befhigen)
+    - [**Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**](#brger-zur-haushaltskompetenz-ihrer-stadt-oder-gemeinde-befhigen)
 - [2 Zielstellung](#2-zielstellung)
-  - [2.1  Phase 1: Visualisierung der NKF-Inhalte](#21--phase-1-visualisierung-der-nkf-inhalte)
-  - [2.2 Phase 2: iNKF-Studio -- Kommunale Finanz-Management-Software](#22-phase-2-inkf-studio----kommunale-finanz-management-software)
-  - [3. Probleme von Kameralistik und herkömmlichem NKF](#3-probleme-von-kameralistik-und-herkmmlichem-nkf)
+    - [2.1  Phase 1: Visualisierung der NKF-Inhalte](#21--phase-1-visualisierung-der-nkf-inhalte)
+    - [2.2 Phase 2: iNKF-Studio -- Kommunale Finanz-Management-Software](#22-phase-2-inkf-studio----kommunale-finanz-management-software)
+- [3. Probleme von Kameralistik und herkömmlichem NKF](#3-probleme-von-kameralistik-und-herkmmlichem-nkf)
     - [3.4  Übergeordnete Ziele](#34--bergeordnete-ziele)
-  - [4 Technologie](#4-technologie)
+- [4 Technologie](#4-technologie)
     - [4.1 Visualisierung und Darstellung der NKF-Inhalte](#41-visualisierung-und-darstellung-der-nkf-inhalte)
     - [4.2 Digitale Infrastruktur-Architektur](#42-digitale-infrastruktur-architektur)
-  - [5 Marktlage](#5-marktlage)
-    - [](#)
-  - [6. Technische Details](#6-technische-details)
+- [5 Marktlage](#5-marktlage)
+- [6. Technische Details](#6-technische-details)
     - [6.1 Buchhaltung](#61-buchhaltung)
     - [5.3 Die Struktur der Ausgangsdaten](#53-die-struktur-der-ausgangsdaten)
-  - [7.4 Datenbankdesign](#74-datenbankdesign)
+    - [7.4 Datenbankdesign](#74-datenbankdesign)
 - [Glossar](#glossar)
 
 
@@ -135,7 +134,9 @@ Die Folge sind riesige Tabelle, die wenig relevante Daten enthalten. Beispielswe
 
 #### 3.3.2 Lösung (iNKF): Spezifische Rechnungslegung implementiert
 
-Wir haben eine Rechnungslegung entwickelt, die den spezifischen Aufgaben und Bedürfnissen der Gemeinden gerecht wird.
+„Der Haushalt ist und bleibt das zentrale Steuerungs- und Rechenschaftsinstrument in der kommunalen Verwaltung. Künftig muss er eine Grundlage für die Outputsteuerung statt der bisherigen Inputsteuerung darstellen. Neben den Erträgen und Aufwendungen sowie die Einzahlungen und Auszahlungen als haushaltswirtschaftliche Rechengrößen kommt der Produktorientierung eine besondere Bedeutung zu. Sie zeigt sich in den Teilplänen des gemeindlichen Haushaltsplans als örtliche Steuerungsebene.“5
+
+Wir haben eine solche Rechnungslegung entwickelt, die den spezifischen Aufgaben und Bedürfnissen der Gemeinden gerecht wird.
 
 #### 3.4.1 Problem: Streit um die „richtige“ Rechnungslegung
 
@@ -193,60 +194,62 @@ Dabei gibt es mehrere Dimensionen entlang derer die Daten aggregiert werden kön
 
 Eine Infrastruktur-Architektur besteht aus einer möglichst einfachen und funktionalen Benutzerschnittstelle zu einem komplexen Datensystem.  
 
-Semantisches Web und Graphdatenbanken
+#### 4.2.1 OrientDB
 
-Leistungs-Kennwerte (Benchmarks)
-Vorteilhafte Marktsituation
-1. Datenquelle:
-#### 4.2.X Linked (Open) Data
-Vision von Tim Berners Lee, dem Erfinder des Internets,
- RDF (researchable description format),
-Datenbankmodell semantisch orientiert
+Als zugrundeliegende Datenbank wird OrientDB verwendet, welche sowohl als klassische SQL-Datenbank funktioniert, aber auch volle Graphdatenbank-Funktionalität mitbringt. Das lässt die Datenstruktur offen und ermöglicht modellgetriebene und [agile](http://www.i-views.de/de/blog/item/agile-daten) Entwicklung. Außerdem ist das Graphenmodell mit dem Prinzip der Linked Data perfekt kompatibel.
 
-DBpedia
+Weitere Vorteile von OrientDB:
 
-Semantisches Modell gemeinsam mit den Gemeinden entwickeln?
+- bietet die Möglichkeit über Serverseitige Funktionen die komplette Middleware leicht zu deployen.
+- beinhaltet einen Tomcat-Server
+- bringt eine REST-API mit
+- beinhaltet ein Web-zugängliches Datenbank-Management-Studio.
 
-Wikipedia ist Beispiel und Ansporn wie durch Kooperation und persönliches Engagement ein Werk entstehen kann, das selbst die besten und renommiertesten Lexika überflügelt hat.
+#### 4.2.2 Linked (Open) Data
 
-#### 4.2.X Agile Software-Entwicklung, agile Daten
-http://www.i-views.de/de/blog/item/agile-daten
+Auf lange Sicht sollen Gemeinden Schnittstellen vermöge eines RDF-Schemas bereitstellen (RDF=researchable description framework).
 
-#### 4.2.X. ETL
-unvollständige Daten, wie verfahren
+Damit folgen wir einer Vision von Tim Berners Lee, dem Erfinder des Internets, welcher auch ein Konzept entwickelt hat und seither aktiv bewirbt, wonach ein neues Format, Daten im Internet zur Verfügung zu stellen, semantisch orientiert ist, das sogenannte *semantic web*. Das bedeutet, dass Relationen zwischen Datensätzen, sogenannte Prädikate, als solche gespeichert werden, anstatt wie bisher, Prädikate nur implizit als bestimmte Stichwörter an einer nicht näher spezifizierten Stelle im Dokument zu platzieren. So wird das Semantische Web zu einer den Globus umspannenden Graph-Datenbank.
+
+Zum einen soll nun das (Graph-)Datenbank-Modell als Präkursor für das zu entwickelnde RDF-Schema dienen, zum anderen ermöglicht die Gleichgestalt der beiden, Schnittstellen zwischen Datenbank und semantischem Web kostengünstig herzustellen.
+
+Wikipedia und, für das semantische Web, DBpedia sind Beispiele und Ansporn wie durch Kooperation und persönliches Engagement ein Werk entstehen kann, das selbst die besten und renommiertesten Lexika überflügelt hat.
 
 
-#### 4.3.1 Transparenz und Komplexitätsreduktion
+### 4.2.3 Transparenz und Komplexitätsreduktion
 
-> The Power of Infographics
-
-„Der Haushalt ist und bleibt das zentrale Steuerungs- und Rechenschaftsinstrument in der kommunalen Verwaltung. Künftig muss er eine Grundlage für die Outputsteuerung statt der bisherigen Inputsteuerung darstellen. Neben den Erträgen und Aufwendungen sowie die Einzahlungen und Auszahlungen als haushaltswirtschaftliche Rechengrößen kommt der Produktorientierung eine besondere Bedeutung zu. Sie zeigt sich in den Teilplänen des gemeindlichen Haushaltsplans als örtliche Steuerungsebene.“5
-
-Semantische Präsentation von Daten bedeutet, dass Informationen aus den Daten (Objekte) die Fragestellung (Prädikate) beantwortend illustrieren, und so Erkenntnisgewinn für den Betrachter (Subjekt) ermöglichen.
+Die semantische Präsentation von Daten bedeutet, dass Informationen aus den Daten (Objekte) die Fragestellung (Prädikate) beantwortend illustrieren, und so Erkenntnisgewinn für den Betrachter (Subjekt) ermöglichen.
 
 Für die Gemeinden sind folgende Fragen von Bedeutung:
 
 1. Machen wir betriebswirtschaftlich gesehen einen guten Job?
-a. Welche Gemeinde erledigt eine Aufgabe besser als wir?
-b. Worin liegt genau der Unterschied? – Arbeitsablauf, Skaleneffekte, etc.
+  a. Welche Gemeinde erledigt eine Aufgabe besser als wir?
+  b. Worin liegt genau der Unterschied? – Arbeitsablauf, Skaleneffekte, etc.
 2. Wie gut setzen wir die politischen Zielvorgaben um?
 3. Wo sind unserer Stärken und/oder Schwächen?
 4. Wirtschaften wir nachhaltig und sparsam?
 5. Ist die Zahlungsfähigkeit der Gemeinde gesichert?
 
-#### 4.3.2 Betrachter*-Schnittstelle (UI für die Bürger*)
+#### 4.4 Betrachter-Schnittstelle (UI für die BürgerInnen)
 
- Visualisierung der Leistungsstruktur stehen folgende Techniken zur Verfügung
+Für die Visualisierung der Leistungsstruktur stehen folgende Techniken zur Verfügung.
 
 
 | Dynamische Tabellen | Diagramme | Karten |
 |--|--|--|
-|- Haushaltsdaten in dynamischen Tabellen angezeigen (dynamisch: der Anwender kann entlang der Dimensionen Daten aggregieren oder verfeinern) | Balken-, Tortendiagramme | Darstellung geografischer Information |
+|Haushaltsdaten in dynamischen Tabellen angezeigen (dynamisch: der Anwender kann entlang der Dimensionen Daten aggregieren oder verfeinern) | Balken-, Tortendiagramme | Darstellung geografischer Information, Choropleth |
+
+>Abbildung: Beispiel Choropleth
+![Abbildung: Beispiel Choropleth; cc: Maximilian Dörrbecker, wikimedia](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/SiedlungsstrukturelleRaumtypen1996.png/800px-SiedlungsstrukturelleRaumtypen1996.png)
+cc: Maximilian Dörrbecker, wikimedia
+
+- Einbindung mittels eines open-source Web-Grafik-Framework, wie das auf D3 basierende [Chiasm](https://github.com/chiasm-project/chiasm). Chiasm ermöglicht die reaktive Interaktion des Benutzers mit den Daten. Veränderungen in der Auswahl werden sofort grafisch abgebildet. Das ermöglich Interaktions-Techniken wie *zoom* und *chrossfilter*.
 
 
 ## 5 Marktlage
-###
+
 #### 5.1.1 Problem:
+
 Für Gemeinden und die öffentliche Hand ist es im Allgemeinen mit großem Aufwand verbunden, Änderungen, Erweiterunge, Verbesserungen ihrer IT umzusetzen. Das liegt an der dünnen Personaldecke und der typischerweise spezifisch nicht-IT-orientierten Amtsführung.
 #### 5.1.2 Lösung:
 #### 5.2.1 Problem:
