@@ -1,12 +1,12 @@
 
 # iNKF -- Infrastruktur für das Neue Kommunale Finanzmanagement
-#### **Business-Case für ein kommunales Daten/IT-Projekt (www.egov-infrastructure.org)**
-#### Data-Warehousing-Infrastruktur und Visualisierung kommunaler Finanzverwaltungsdaten
+#### Business-Case für ein kommunale Data-Warehousing-Infrastruktur (www.egov-infrastructure.org) und die Visualisierung kommunaler Finanzverwaltungsdaten
 
 ```
 Autoren: Thomas Bunke, Arne Pfeilsticker
 Stand:   20.12.2015
 Status:  in Arbeit
+Caveat:  Name in Findung: iNKF, NKF+, KLF werden synonym verwendet
 ```
 
 [TOC]
@@ -51,11 +51,10 @@ Damit sind die Verwaltungs-Ereignisse (auch Fakten genannt),
 * Leistung von der Kommune gegenüber dem Bürger,
 * Investitionen durch die öffentliche Hand und  
 * Gebühren/Abgaben des Bürgers
-* ...
 
 von vornherein so gestaltet, dass sowohl die rechtliche als auch wirtschaftliche Interpretation korrekt abgebildet wIrd.
 
-Das vorgeschlagene operative System soll in einer Infrastruktur-Architektur aufgebaut werden, die im [Kapitel 5.2.2][5.2.2] näher beschrieben wird. Bei den Daten handelt es sich um die Daten des Neuen kommunalen Finanzmanagement (NKF).
+Das vorgeschlagene operative System soll in einer Infrastruktur-Architektur aufgebaut werden, die in [Kapitel 4](./Businessplan kommunales Leistungs- und Finanzmanagement.md#42-digitale-infrastruktur-architektur) näher beschrieben wird. Bei den Daten handelt es sich um die Daten des Neuen kommunalen Finanzmanagement (NKF).
 
 
 ## 3. Probleme von Kameralistik und herkömmlichem NKF
@@ -118,6 +117,18 @@ Die Folge sind riesige Tabelle, die wenig relevante Daten enthalten. Beispielswe
 
 Wir haben eine Rechnungslegung entwickelt, die den spezifischen Aufgaben und Bedürfnissen der Gemeinden gerecht wird.
 
+#### 3.4.1 Problem: Streit um die „richtige“ Rechnungslegung
+
+In allen klassischen Buchhaltungssystemen werden die Geschäftsvorfälle nach bestimmten Kriterien und damit nach einer bestimmten Interpretation gebucht. Diese Kriterien sind in den Rechnungslegungsvorschriften festgelegt. Dabei entsteht zwangsläufig der Kampf um die „richtige“ Interpretation. Die Rechnungslegung nach HGB unterscheidet sich von der Rechnungslegung nach US-GAAP oder IFRS. Es macht einen erheblichen Unterschied, ob z.B. ein Gebäude nach dem Zeitwert mit z.B. 100.000 € oder nach dem aktuellen Marktwert mit 500.000 € in der Bilanz steht.
+
+In klassischen Rechnungslegungssystemen kommt es durch die Buchung eines Geschäftsvorfalls nicht nur zu einer bestimmten Interpretation von Fakten, sondern wertvolles Fakten- und Beziehungswissen geht teilweise verloren.
+In den klassischen Rechnungslegungssystemen werden teilweise maschinell und teilweise manuell aus den buchungsrelevanten Geschäftsvorfällen Buchungen generiert bzw. abgeleitet. Die Buchungen werden auf Konten gesammelt und als Datensätze in Datenbanken gespeichert. Für die Rechnungslegung werden die Buchungen auf den Konten saldiert und durch manuelle und maschinell generierte Abschlussbuchungen ergänzt. Danach werden ein oder mehrere Konten in den Bilanzpositionen und Positionen der Gewinn- und Verlustrechnung zusammengefasst.
+
+#### 3.4.2 Lösung (iNKF): Trennung von Fakten und Interpretationen
+
+In der multidimensionalen Buchhaltung besteht eine strikte Trennung von Fakten und der Interpretation dieser Fakten.
+In der Datenbank werden nicht die Buchungen (= interpretierte Fakten), sondern nur die Geschäftsvorfälle (= Fakten) gespeichert. Die Bilanz oder Gewinn- und Verlustrechnung wird dann automatisiert aus diesen Fakten berechnet. Die automatisierte Berechnung ist die in Programme und Interpretationsschemata gegossene Interpretation der Fakten. Die Buchungssätze sind in der multidimensionalen Buchhaltung lediglich ein Zwischenergebnis, das zur Dokumentation gespeichert werden kann. Durch die Trennung von Fakten und der Interpretation der Fakten können die Fakten, auch rückwirkend, nach beliebig vielen und unterschiedlichen Interpretationen bewertet werden. Diese unterschiedlichen Interpretationen können als unterschiedliche Sichten auf die Fakten verstanden werden. Der Streit um die „richtige“ Rechnungslegung und Bewertung wird insofern beigelegt, dass man unterschiedliche Sichtweisen zulässt.
+
 
 ### 3.4  Übergeordnete Ziele
 > *"Der Weg zur globalen Demokratie führt nicht durch die Staaten. Er führt durch Städte. Die Demokratie wurde in der antiken Polis geboren. Ich glaube, sie kann in der globalen Kosmopolis wiedergeboren werden. Auf dieser Reise von Polis zu Kosmopolis können wir die Macht der Demokratie wieder entdecken auf einer globalen Ebene. Einen Völkerbund können wir nicht kreieren. Das ist gescheitert. Aber einen Städtebund. Keine Vereinten [..] Nationen, sondern die Vereinten Städte der Welt." (Benjamin Barber, [TED-Talk][4])*
@@ -128,7 +139,12 @@ Von unserer Infrastruktur werden nicht nur Gemeinden in der Bundesrepublik, sond
 Wir glauben, dass die Kommunen für Demokratie und Wohlstand in der Welt eine Schlüsselrolle einnehmen und dass diese Rolle in der globalisierten Welt noch an Bedeutung gewinnen wird. Wir glauben, dass kooperatives Verhalten unter den Gemeinden, auf Basis von neutralen Vergleichskennzahlen, den Wunsch der Kommunen, wirtschaftlich unabhängig und demokratisch fortschrittlich organisiert zu sein, besser erfüllen kann, als wenn diese versuchen das Wettbewerbsprinzip der Unternehmen zu übernehmen.
 
 #### 3.4.2 Synergieeffekte schaffen
-Jede Gemeinde, die am iNKF-System angeschlossen ist, hat automatisch Zugriff auf die nicht vertraulichen Daten aller Teilnehmer. Vertragsvorlagen, Planungsunterlagen, Arbeitspläne und jede Menge Erfahrungen könnten so effektive geteilt werden und zu erheblichen Synergieeffekten führen.
+
+Jede Gemeinde, die am iNKF-System angeschlossen ist, hat automatisch Zugriff auf die nicht vertraulichen Daten aller Teilnehmerinnen. Vertragsvorlagen, Planungsunterlagen, Arbeitspläne und praktische Erfahrungen könnten so effektiv geteilt werden und zu erheblichen Synergieeffekten führen.
+
+Erst das Wissen, wo die entscheidenden Unterschiede in der Produktion und in den Kosten liegen, ermöglicht es den Gemeinden zu reagieren. Dazu müssen aber die relevanten Daten den SachbearbeiterInnen und EntscheidungsträgerInnen ohne zusätzlichen Aufwand zur Verfügung stehen. Das iNKF leistet genau dies.
+
+Wenn beispielsweise eine Gemeinde einen neuen Kindergarten plant, dann stehen ihr automatisch alle Unterlagen aller realisierten und in Realisierung befindlichen Kindergärten zur Verfügung. Ein Sachbearbeiter könnte diese Unterlagen nicht nur für die eigene Planung nutzen, sondern aus diesen Erfahrungen lernen und sich gegebenenfalls mit den Kollegen anderer Städte austauschen. Von der Planung einzelner Produkte bis zu ihrer Realisierung können so Gemeinden voneinander profitieren und lernen.
 
 #### 3.4.3 Gemeinsame konstruktive Politik
 Für die VertreterInnen in den Parlamenten besteht ein erhebliches Profilierungspotential, wenn Kritikpunkte der Gemeindefinanzierung klar herausgearbeitet werden können und sich daraus konkrete Verbesserungsvorschläge einbringen lassen.
@@ -152,7 +168,10 @@ Dabei gibt es mehrere Dimensionen entlang derer die Daten aggregiert werden kön
 3. Struktur des Vermögens: Bereiche – Kontenklassen – Kontengruppen - Konten
 4. Zeiträume: Tag – Woche – Monat – Jahr – Jahre
 
-### 4.2 Datenbankmodell
+
+### 4.2 Digitale Infrastruktur-Architektur
+
+Eine Infrastruktur-Architektur besteht aus einer möglichst einfachen und funktionalen Benutzerschnittstelle zu einem komplexen Datensystem.  
 
 Semantisches Web und Graphdatenbanken
 
@@ -261,7 +280,8 @@ Unter der gemeindlichen Rechengröße „Aufwand“ wird betriebswirtschaftlich 
 Auch hier wird der analoge Fehler gemacht: Bewerteter Güterverzehr sind Kosten und nur z.T. auch Aufwand. Aufwand ist der Abgang an Vermögen und zwar unabhängig davon, wie er zu Stande kam.
 Die Leistungsstruktur in Kommunen lässt sich aus der Sicht des NKF durch folgendes Strukturdiagramm darstellen:
 
-Abbildung 1 Kommunale Leistungsstruktur aus der Sicht des NKF-Systems
+>![Abbildung: Kommunale Leistungsstruktur aus der Sicht des NKF-Systems](./graphics/InputOutput.png)
+
 Die Abb. Kommunale Leistungsstruktur visualisiert den Gesamtzusammenhang, der durch das Neue Kommunale Finanzmanagement-System dargestellt wird. Diese graphische Darstellung könnte zu einer interaktiven Benutzerschnittstelle in das NKF-System ausgebaut werden.
 Wo das Wort Gemeindeverwaltung steht, könnte eine Dropdown-Combobox sein, aus der man sich die Gemeinde auswählen kann. Nach der Auswahl werden die Übersichtsdaten der ausgewählten Gemeinde angezeigt.  In den einzelnen Pfeilen und Kästen stehen dann die entsprechenden Beträge. Wenn man mit dem Cursor auf einen Betrag zeigt, dann wird die nächste Gliederungstiefe in einem Drilldown-Stil angezeigt. Alle Pfeile und Kästen könnten entsprechend der Höhe des Betrages in entsprechender Größe angezeigt werden. Dadurch könnte man mit einem Blick wesentliche Informationen aus dem Schaubild ziehen.
 Um weiter ins Detail zu gehen könnte man dann z.B. ein bestimmtes Produkt auswählen und bekommt die Daten des entsprechenden Teilhaushaltes angezeigt.
@@ -315,7 +335,9 @@ Die Aufgaben der Ebene KLR sind:
 * Entscheidungsgrundlage: Die Erkenntnisse, die aus der KLR gezogen werden, könnten eine wichtige Grundlage für die Entscheidungen in den Gemeinden werden.
 
 Zusammenfassend kann also gesagt werden, dass ein Finanzmanagement-System nicht ausreicht. Gebraucht wird ein kommunales Leistungs- und Finanzmanagement-System.
+
 #### 6.1.3 Transparenz: Klare Trennung zwischen Politik und Verwaltung
+
 In der Ergebnisrechnung, d.h. auf der Aufwands- und Ertragsebene, werden politische und wirtschaftliche Faktoren miteinander vermengt und verwischt.
 Wenn z.B. für die Eintrittskarten ins Theater im Durchschnitt 20,00 € bezahlt werden und der Selbstkostenpreis jedoch bei 70,00 € liegt, dann sind die 50 € Zuschuss eine politische Entscheidung. Diese politische Entscheidung wird aber nur dann sichtbar, wenn man die Ergebnisse der Kosten- und Leistungsrechnung (KLR) mit den Ergebnissen der Ergebnisrechnung vergleicht.
 Aber selbst dieser Vergleich deckt noch nicht die ganze Wahrheit auf, weil ein Teilergebnisplan für das Produkt Theater noch Transferleistungen enthalten kann.
@@ -338,8 +360,7 @@ Die angemessenen Verrechnungspreise und die Trennung zwischen einem Verwaltungs-
 Nur auf der Ebene der wirtschaftlichen Ergebnispläne macht es Sinn die Ergebnisse zwischen den Verwaltungen zu vergleichen. Erst dann zeigt ein positives Verwaltungsergebnis an, dass eine Fachabteilung aus betriebswirtschaftlicher Sicht gut gearbeitet hat.
 Erst durch die Umsetzung dieser Vorschläge könnte das NKF-System die erklärten Ziele in Angriff nehmen.
 
-Abbildung 1 Outputsteuerung durch die Lösung des Erlös-Ertrags-Problems
-(Hinweis: Bild ist in Überarbeitung.)
+>![Abbildung: Outputsteuerung durch die Lösung des Erlös-Ertrags-Problems](./graphics/Outputsteuerung.png)
 
 #### 6.1.4 Qualität buchen: Der fehlende Baustein der Rechnungslegung
 (Die folgenden Ideen sind in einem sehr frühen Entwicklungsstadium.)
@@ -363,34 +384,26 @@ Wie das Immobilienbeispiel zeigt, hat die Bewertung einen erheblichen Einfluss a
 Wenn wir Unternehmen nicht nur als „Durchlauferhitzer“ für Vermögen betrachten, um noch mehr Vermögen zu generieren, sondern in ihrer umfassenden Bedeutung für die Gesellschaft, dann müssen wir auch die Rechnungslegung von der einseitigen Fixierung auf das Vermögen auf eine Berücksichtigung aller gesellschaftsrelevanter Aspekte erweitern.
 Wir brauchen eine Rechnungslegung, die nicht nur quantitativ das Vermögen, sondern qualitativ das gesamte Unternehmen bewertet und misst.
 
-[5.2.2]:https://stackedit.io/editor#522-digitale-infrastruktur-architektur
-#### 6.2.2 Digitale Infrastruktur-Architektur
+#### 5.2.3 Zielorientierte Planung, Durchführung und Kontrolle
 
-Eine Infrastruktur-Architektur besteht aus einer möglichst einfachen und funktionalen Benutzerschnittstelle zu einm komplexen Datensystem.  
-
-Abbildung 1: Kommunale Leistungs- und Finanzmanagement-Infrastruktur
-ToDo: Grafik näher erläutern.
-####5.2.3 Zielorientierte Planung, Durchführung und Kontrolle
 Die geplante Output-Steuerung durch das iNKF-System ist nicht nur für die Gemeinde als Ganzes eine gute Idee, sondern kann konsequent über die Dezernate, Fachbereich bis hinunter zu den einzelnen Arbeitsplätzen angewandt werden.
 Letzt endlich besteht eine Gemeindeverwaltung aus einem Netz von Input-Verarbeitung-Output-Einheiten, die durch Leistungen miteinander verbunden sind. Dieses Prinzip lässt sich von der obersten Ebene der Gemeinde über die Dezernate, Fachbereiche und den einzelnen Arbeitsplätzen bis auf die Ebene der Produktion der einzelnen Produkte (= Outputs) einer Gemeinde verfeinern.
 
-Abbildung 1: Schema der internen Produktionsstruktur
 Um die Produktionsstruktur (= Pfeile) von den Gütern (= Kreise) zu trennen wurden die ursprüngliche Darstellung wie in Error: Reference source not found gezeigt geändert. Die grünen Kreise mit dem schwarzen Rand stellen Zwischengüter dar, die Inputs für andere Abteilungen, etc. darstellen.
 Wenn ein Output einmalig oder nur selten erzeugt wird, dann spricht man von einem Projekt, ansonsten sind die Outputs die Produkte (= Güter), die die Verwaltung für die Bürger erzeugt.
 Am Beispiel eines Projektes soll die Verfeinerung aufgezeigt werden. Entscheidend ist, dass diese Vorgehensweise bei allen Produktionsprozessen mit dem gleichen einfachen Verfahren durchgeführt werden kann.
 ToDo
 Auf der untersten Ebene haben wir die Arbeitspakete, die sich ebenfalls nach dem gleichen Input-Verarbeitung-Output-Schema aufbauen lassen. Je nach Kontext spricht man aber z.B. bei der Verarbeitung von Vorgang, Aktivität, Tätigkeit oder Aufgabe. Gemeint ist immer das Gleiche: Die Verarbeitung der Inputs zu den gewünschten Outputs.
 
-Abbildung 1: Arbeitspaket
-Der hier dargestellte Ansatz ist im Bereich der Datenverarbeitung auch als sog. EVA-Prinzip bekannt. Dabei steht E für Eingabe, V für Verarbeitung und A für Ausgabe.
 In der verallgemeinerten, für alle Produktionsprozesse anwendbare Variante, lassen sich die Inputs in drei Gruppen einteilen: Werkstoffe, Betriebsmittel und Mitarbeiter. Diese Gruppen werden auch Ressourcen genannt. Im Gegensatz zu den Ressourcen stehen die Tätigkeiten, die aus und mit Hilfe der Ressourcen die gewünschten Produkte bzw. Projekte erstellen.
-Der entscheidende Punkt dieser Darstellung ist, dass das gleiche Prinzip vom einzelnen Gut bis zur Gemeinde als Ganzes angewandt werden kann. Darüber hinaus kann die Aggregation über die Gemeinden hinaus auf Kreise, Regionen und Länder ausgeweitet werden. Es können auch einzelne Produkte und Produktgruppen isoliert betrachtet werden.
+Vorteil dieser Darstellung ist die Anwendung des gleichen Prinzips, vom einzelnen Gut bis zur Gemeinde. Darüber hinaus kann die Aggregation über die Gemeinden hinaus auf Kreise, Regionen und Länder ausgeweitet werden. Es können auch einzelne Produkte und Produktgruppen isoliert betrachtet werden.
 Die Gruppierung der Ressourcen führt zu den sog. Kostengruppen. Betrachtet man die Werkstoffe wie sie zeitlich in das Produkt eingehen, dann erhält man den sog. Materialfluss.
 Auf der Seite der Tätigkeiten führt die Gruppierung zu den sog. Leistungsbereichen. Die Anordnung der Tätigkeiten im zeitlichen Verlauf und in der logischen Reihenfolge führt zu Netzplänen.
 Die Mitarbeiter und Betriebsmittel bilden auf der untersten Ebene die Arbeitsplätze, die die Tätigkeiten ausführen. Im zeitlichen Verlauf führen die Tätigkeiten zur Kapazitätsauslastung der Arbeitsplätze.
 Der Zusammenhang wird in Abbildung 1 dargestellt:
 
-Abbildung 1: Zielorientierte Planung, Durchführung und Kontrolle
+>![Abbildung: Zielorientierte Planung, Durchführung und Kontrolle](./graphics/ZielorientiertePlanungDurchfKontr.png)
+
 Erst mit Hilfe des Gesamtpaketes, bestehend aus den Kosten- und Erlösinformationen sowie der Produktionsstruktur, können die Gemeinde ihre eigenen Tätigkeiten bewerten und mit anderen Gemeinden vergleichen.
 Beide Aspekte fehlen im NKF-System. Erst wenn eine Gemeinde anhand der Kosten- und Leistungsrechnung z.B. weiß, dass ein Kindergartenplatz erheblich mehr kostet, als in anderen Gemeinden, hat sie einen Anhaltspunkt nach den Ursachen zu forschen. Aber dazu benötigt sie die Produktions- und Kostenstruktur auf den darunter liegenden Ebenen. Auf diesen darunter liegenden Ebenen lässt sich dann z.B. feststellen, dass die Gruppengröße deutlich kleiner ist, als bei den Vergleichskindergärten. Oder es lässt sich z.B. ermitteln, dass die Betriebskosten des Kindergartens deutlich höher sind. Anhand dieser Information lässt sich dann vielleicht feststellen, dass die Kindergärten schlecht isoliert sind und daher erheblich höhere Heizkosten verursachen.
 5.2.4 Multidimensionale Buchhaltung
@@ -405,34 +418,23 @@ Die G+V-Rechnung aggregiert die Wert- und Vermögensänderungen im Abrechnungsze
 Die starre Abbildung der Geschäftsvorfälle ist nicht sachlich begründet, sondern dem Umstand geschuldet, dass es bei der Erfindung der kaufmännischen Buchführung keine Computer gab, mit denen komplexe und vielfältige Abbildungen mit vertretbarem Aufwand möglich gewesen wären.
 Diese erzwungenen starren Abbildungen führen einerseits zu Brüchen bei der Aggregation der Vermögenswerte und andererseits ist jede getroffene Entscheidung für einen bestimmten Kontenrahmen und einen bestimmten Aufbau der Bilanz und G+V-Rechnung ein mehr oder weniger brauchbarer Kompromiss. Dieser Kompromiss ist ungefähr so, wie wenn man sich eine Schuhgröße einigen würde. Solche Schuhe passen nur in bestimmten und den wenigsten Fällen.  Jeder Kontenrahmen und die dazugehörige Bilanz und G+V-Rechnung sind ein einseitiger Blick auf die Vermögensverhältnisse und die Vermögensentwicklung eines Wirtschaftssubjektes.
 Der Begriff „doppelte“ Buchführung rührt daher, dass ein Buchungssatz grundsätzlich aus einerseits Soll- und andererseits Habenbuchungen bestehen. Dabei ist die Summe der Sollbuchungen genauso hoch wie die Summe der Habenbuchen.
+
+
+
 Die Einteilung in Soll und Haben reflektiert die Grundstruktur von schuldrechtlichen Verträgen, die sich aus gleichwertigen Verpflichtungs- und Erfüllungsgeschäften zusammensetzen.
-5.2.4.2 Die Grundideen der multidimensionalen Buchhaltung
-In der multidimensionalen Buchhaltung wird der Sinn und Zweck einer Buchhaltung mit den Möglichkeiten der elektronischen Datenverarbeitung neu umgesetzt.
-Auf starre Abbildungen wird verzichtet. Sie sind sachlich weder notwendig noch sinnvoll und verkomplizieren eine Rechnungslegung unnötig.
+
+>![Abbildung: Grundstruktur eines schuldrechtlichen Vertrages](./graphics/RechtsgrundlageBGB.png)
+
+
+
+#### 5.2.4 Die Grundideen der multidimensionalen Buchhaltung
+
+In der multidimensionalen Buchhaltung wird der Sinn und Zweck einer Buchhaltung mit den Möglichkeiten der elektronischen Datenverarbeitung neu umgesetzt. Auf starre Abbildungen wird verzichtet. Sie sind sachlich weder notwendig noch sinnvoll und verkomplizieren eine Rechnungslegung unnötig.
 Die verschiedenen Aspekte der betriebswirtschaftlichen Sachverhalte und Geschäftsvorfälle werden in verschiedenen Dimensionen geordnet dokumentiert. Auf diese Weise entsteht ein multidimensionaler Raum aus Fakten. Die Fakten werden dadurch sehr kompakt gespeichert und sind für Auswertungen mittels EDV ideal zugänglich.
-Zur Betrachtung und Analyse dieser Fakten können je nach Bedarf Teilräume, Schnitte und Projektionen gebildet werden.
-Entlang der Dimensionen können die gespeicherten Daten aggregiert, ausgewertet und angezeigt werden. Die so erzeugten vielfältigen Abbildungen können als unterschiedliche Sichten auf das Vermögen, die Vermögensänderungen und betriebswirtschaftlichen Sachverhalte betrachtet werden.
+
+Zur Betrachtung und Analyse dieser Fakten können je nach Bedarf Teilräume, Schnitte und Projektionen gebildet werden. Entlang der Dimensionen können die gespeicherten Daten aggregiert, ausgewertet und angezeigt werden. Die so erzeugten vielfältigen Abbildungen können als unterschiedliche Sichten auf das Vermögen, die Vermögensänderungen und betriebswirtschaftlichen Sachverhalte betrachtet werden.
 Die klassischen Bilanzen, Gewinn- und Verlustrechnungen entsprechen bestimmten Sichten. Die Restriktionen und Abbildungen für eine bestimmte Sicht können abgespeichert und bei Bedarf wiederverwendet werden.
 Aufgrund der fehlenden starren Restriktionen und Abbildungen können in der multidimensionalen Buchhaltung jede beliebige klassische Buchhaltung abgebildet werden. Voraussetzung hierfür ist, dass die hierfür notwendigen Sachverhalte abgespeichert sind.
-
-##### 5.2.4.3 Trennung von Fakten und Interpretationen
-
-In allen klassischen Buchhaltungssystemen werden die Geschäftsvorfälle nach bestimmten Kriterien und damit nach einer bestimmten Interpretation gebucht. Diese Kriterien sind in den Rechnungslegungsvorschriften festgelegt. Dabei entsteht zwangsläufig der Kampf um die „richtige“ Interpretation. Die Rechnungslegung nach HGB unterscheidet sich von der Rechnungslegung nach US-GAAP oder IFRS. Es macht einen erheblichen Unterschied, ob z.B. ein Gebäude nach dem Zeitwert mit z.B. 100.000 € oder nach dem aktuellen Marktwert mit 500.000 € in der Bilanz steht.
-Diese unterschiedlichen Bewertungen und damit unterschiedlichen Sichtweisen auf betriebswirtschaftliche Sachverhalte geht auch weit über den betriebswirtschaftlichen Rahmen hinaus. Die weltweite Finanzkrise 2007/2008 währe ohne die in den USA geltenden Rechnungslegungsvorschriften nicht möglich gewesen.
-Eine einzige Änderung in den Bewertungsvorschriften hätte sogar die Entstehung der Finanzkrise verhindern können: Der Wertansatz für Kreditforderungen und den daraus abgeleiteten Kreditderivate darf maximal die Höhe der Restforderung des zugrunde liegenden Kredits betragen. Eventuelle Verluste, die dadurch entstehen, dass der Kaufpreis der verbrieften Kreditforderung höher ist, als die Restforderung aus dem Kredit, werden bei der Berechnung der Steuern nicht berücksichtigt.
-Das bedeutet, dass Derivate nach wie vor möglich währen, aber ihre Summe wird auf die valutierende Kreditsumme (= offene Kreditsumme) beschränkt.  Und wer eine Kreditforderung zu einem Preis kauft, der höher ist als die offene Kreditsumme, der kann den dabei entstehenden Verlust nicht steuerlich geltend machen.
-D.h. z.B. ein Immobilienkreditforderung über 100.000 € darf maximal mit 100.000 € in den Bilanzen stehen.
-Es sind die Rechnungslegungsvorschriften, die den Aufbau von Finanzblasen ermöglichen und in der Boom Phase zu einem lukrativen Geschäft gemacht haben.
-Dieses Beispiel will lediglich auf die Bedeutung der Rechnungslegung für die Entwicklung einer Volkswirtschaft und das Verhalten der Wirtschaftssubjekte hinweisen.
-In klassischen Rechnungslegungssystemen kommet es durch das Buchung eines Geschäftsvorfalles nicht nur zu einer bestimmten Interpretation von Fakten, sondern wertvolles Fakten- und Beziehungswissen geht teilweise verloren.
-In den klassischen Rechnungslegungssystemen werden teilweise maschinell und teilweise manuell aus den buchungsrelevanten Geschäftsvorfällen Buchungen generiert bzw. abgeleitet. Die Buchungen werden auf Konten gesammelt und als Datensätze in Datenbanken gespeichert. Für die Rechnungslegung werden die Buchungen auf den Konten saldiert und durch manuelle und maschinell generierte Abschlussbuchungen ergänzt. Danach werden ein oder mehrere Konten in den Bilanzpositionen und Positionen der Gewinn- und Verlustrechnung zusammengefasst.
-In der multidimensionalen Buchhaltung besteht eine strikte Trennung von Fakten und der Interpretation dieser Fakten.
-In der Datenbank werden nicht die Buchungen (= interpretierte Fakten), sondern nur die Geschäftsvorfälle (= Fakten) gespeichert. Die Bilanz oder Gewinn- und Verlustrechnung wird dann automatisiert aus diesen Fakten berechnet. Die automatisierte Berechnung ist die in Programme und Interpretationsschemata gegossene Interpretation der Fakten.
-Die Buchungssätze sind in der multidimensionalen Buchhaltung lediglich ein Zwischenergebnis, das zur Dokumentation gespeichert werden kann.
-Durch die Trennung von Fakten und der Interpretation der Fakten können die Fakten, auch rückwirkend, nach beliebig vielen und unterschiedlichen Interpretationen bewertet werden. Diese unterschiedlichen Interpretationen können als unterschiedliche Sichten auf die Fakten verstanden werden.
-Der Streit um die „richtige“ Rechnungslegung und Bewertung wird insofern beigelegt, dass man unterschiedliche Sichtweisen zulässt.
-
-##### 5.2.4.4 Dimensionen
 
 
 ##### 5.2.4.5 Abstrahieren – Spezialisieren – Verallgemeinern
@@ -443,11 +445,7 @@ Auch werden die Buchungssätze nicht durchgebucht, sondern virtuell erzeugt. Unt
 Beim Durchbuchen gehen wichtige Strukturinformationen verloren. Darüber hinaus soll es dem Nutzer überlassen bleiben, ob z.B. die Kosten- und Leistungsrechnung für ein Produkt, eine Produktgruppe, einen Fachbereich oder für eine Region erstellt werden. Diese generelle Vorgehensweise schließt nicht aus, dass oft nachgefragte Sichten abgespeichert werden, damit sie ohne neu zu berechnen direkt angezeigt werden können.
 Bei einer virtuellen Buchhaltung können aus den gleichen primären Geschäftsvorfällen parallel Buchungsdaten nach unterschiedlichen Rechnungslegungsvorschriften erzeugt werden. Eine Gemeinde könnte z.B. ihre eigene Variante der Buchhaltung haben und gleichzeitig könnten für einen landesweiten Vergleich alle Gemeinden nach einheitlichen Rechnungslegungsvorschriften bewertet und ausgewertet werden.
 
-#### 5.2.5 Synergieeffekt schaffen
 
-Erst das Wissen, wo die entscheidenden Unterschiede in der Produktion und in den Kosten liegen, ermöglicht es den Gemeinden zu reagieren. Dazu müssen aber die relevanten Daten ohne zusätzlichen Aufwand den Sachbearbeitern und Entscheidungsträgern in ihrer tagtäglichen Arbeit zur Verfügung stehen.
-Durch die Infrastruktur-Architektur der vorgeschlagenen kommunalen Leistungs- und Finanzmanagement-Infrastruktur könnten genau dies erreicht werden. Wenn beispielsweise eine Gemeinde einen neuen Kindergarten plant, dann stehen ihr automatisch alle Unterlagen aller realisierten und in Realisierung befindlichen Kindergärten zur Verfügung. Ein Sachbearbeiter könnte diese Unterlagen nicht nur für die eigene Planung nutzen, sondern aus diesen Erfahrungen lernen und sich gegebenenfalls mit den Kollegen anderer Städte austauschen.
-Von der Planung einzelner Produkte bis zu ihrer Realisierung können so Gemeinden voneinander profitieren und lernen.
 
 ### 5.3 Die Struktur der Ausgangsdaten
 
@@ -482,7 +480,8 @@ benötigt: für jede Dimension entlang derer die Daten aggregiert werden sollen,
 |Normalisierung | reduziert das Datenvolumen drastisch und wenn die Daten nur auf den untersten Aggregationsstufen der Dimensionen vorliegen, dann können die Daten dynamisch durch den Anwender gesteuert aggregiert werden.|
 
 
-## 5.4 Datenbankdesign
+## 7.4 Datenbankdesign
+
 ### 7.4.1 Zielsetzung Datenbankdesign
 
 Visualisierung NKF-Daten: Die Datenbank soll so gestaltet sein, dass damit die Visualisierung der Leistungsstruktur der NKF-Daten als Benutzerinterface durchgeführt werden kann.
@@ -503,12 +502,11 @@ Die Relation wird so aufgebaut, dass später der Zugriff auf die Daten möglichs
 
 Tabelle 1: Inventar (inventory)
 
-|Spaltenbezeichnung||Bemerkung
-|Englisch|Deutsch| |
-
+|Spaltenbezeichnung|  |Bemerkung|
+|---|---|---|---|---|---|
+|*Englisch*|*Deutsch*| |
 |inventory_id|Inventar-Nr.|Primärschlüssel: Bestands-, Inventar-Nr. Z.B. Bürogebäude|
-|part_of|Teil von|FS: Bestands-, Inventar-Nr. gehört zu einem komplexen Vermögenswert. Auf diese Art können zusammengesetzte Vermögenswerte mit unterschiedlichen Wertansätzen oder Eigenschaften gebildet werden.
-Beispiel: Heizungsanlage (inventory) in einem Gebäude (inventory_parent).|
+|part_of|Teil von|FS: Bestands-, Inventar-Nr. gehört zu einem komplexen Vermögenswert. Auf diese Art können zusammengesetzte Vermögenswerte mit unterschiedlichen Wertansätzen oder Eigenschaften gebildet werden. Beispiel: Heizungsanlage (inventory) in einem Gebäude (inventory_parent).|
 |client|Mandant|FS: Mandant / Kommune, Zusätzlich kommen
 |acquired|erworben am|Ab diesem Datum gehört / soll gehören der Vermögensgegenstand zum Vermögen oder Besitz des Mandanten.|
 |disposed|abgegangen am|Ab diesem Datum gehört der Vermögensgegenstand nicht mehr zum Vermögen oder Besitz des Mandanten. (bzw. soll nicht mehr gehören bei Plandaten.)|
@@ -517,7 +515,6 @@ Beispiel: Heizungsanlage (inventory) in einem Gebäude (inventory_parent).|
 |unit|Maßeinheit|der Leistungsmenge: Stk., kg, cbm, qm, €, etc. oder Fremdwährung|
 |product|Produktschlüssel|FS: Leistungs-/Produktschlüssel des inventarisierten Gegenstandes. (Standard:code, z.B. GTIN:9783453146983)|
 |name|Name|Name des Inventarisierten Gegenstandes|
-|||
 |valuation|Wertansatz|z.B. Marktpreis, Selbstkostenpreis, Nominalwert|
 |amount|Betrag|Netto-Betrag|
 |tax|Steuern|Steuern, die dem Geschäftsvorfall direkt zugeordnet werden können, wie z.B. die MwSt.|
@@ -537,8 +534,8 @@ Gegebenenfalls müssen Beträge und Mengen auf 0 gesetzt werden, wenn durch die 
 
 
 | Spaltenbezeichnung| | Bemerkung|
-| Englisch| Deutsch | | |
-|-- |-- |-- |--|  
+|-- |-- |-- |
+| Englisch| Deutsch | |
 | client| Mandant| Fremdschlüssel Mandant / Kommune|
 | booking_date| Buchungsdatum| Dieses Datum entscheidet in welches Haushaltsjahr/-periode der Geschäftsvorfall gehört.|
 | data_type| Datentyp| 0=Ist-Daten, Plan-Daten = 10-99, Template-Daten = 100|
@@ -566,7 +563,7 @@ Gegebenenfalls müssen Beträge und Mengen auf 0 gesetzt werden, wenn durch die 
 | entry_date| Erfassungsdatum| Zeitstempel, wann der Geschäftsvorfall erfasst wurde.|
 | entered_by| Erfasser| Fremdschlüssel des Erfassers|
 
-Tabelle : Geschäftsvorfälle (business transactions)
+Tabelle: Geschäftsvorfälle (business transactions)
 
 
 
@@ -574,7 +571,8 @@ Mit den Geschäftsvorfällen wird dokumentiert: Wer leistet Was an Wen.
 Dabei sollte die Zuordnung so tief wie möglich ansetzen, damit bei der Kostenrechnung möglichst viele Kosten direkt den Kostenträgern zugeordnet werden kann.
 
 
-Tabelle persons (legal_entities) – natürliche und juristische Personen und Gruppen von Personen
+Tabelle: persons (legal_entities) – natürliche und juristische Personen und Gruppen von Personen
+
 | Spalte| Deutsche Bezeichnung| Datentyp| Bemerkung|
 |-- | --| --| --|
 | id| Personen-ID| varchar| Primärschlüssel Rechtssubjekt|
@@ -650,9 +648,6 @@ Als Passiva bezeichnet man die bewertbaren Pflichten, wie z.B. Verbindlichkeiten
 Geld – Forderungen/Verbindlichkeiten – Umlaufvermögen – Anlagevermögen
 Änderung
 
-Den Begriff Gemeinde weiter denken: Die Arbeit der Vereine in die Rechnungslegung einbeziehen.
-
-> Nicht die Gemeinde hat am besten gewirtschaftet, die in ihrer Bilanz einen möglichst hohen Gewinn ausweist, sondern die Gemeinde, die im Rahmen ihrer Möglichkeiten sparsam, wirtschaftlich und nachhaltig ihre Aufgaben erfüllt.
 
 Als Gegenmodell wird für Gemeinden ein Vorschlag unterbreitet, wie durch Kooperation und lokales Handeln, Synergieeffekte erzeugt werden können, die das Gemeinwohl mehren.
 Open Source ist hierfür ein Beispiel: Einmal Kosten und dann unbeschränkter Nutzen für alle.
