@@ -3,7 +3,7 @@
 #### Business-Case für ein kommunale Data-Warehousing-Infrastruktur (www.egov-infrastructure.org) und die Visualisierung kommunaler Finanzverwaltungsdaten
 
 ```
-Autoren: Thomas Bunke, Arne Pfeilsticker
+Autoren: Arne Pfeilsticker, Thomas Bunke
 Stand:   20.12.2015
 Status:  in Arbeit
 Caveat:  Name in Findung: iNKF, NKF+, KLF werden synonym verwendet
@@ -534,7 +534,7 @@ Gegebenenfalls müssen Beträge und Mengen auf 0 gesetzt werden, wenn durch die 
 
 
 | Spaltenbezeichnung| | Bemerkung|
-|-- |-- |-- |
+|---|---|---|
 | Englisch| Deutsch | |
 | client| Mandant| Fremdschlüssel Mandant / Kommune|
 | booking_date| Buchungsdatum| Dieses Datum entscheidet in welches Haushaltsjahr/-periode der Geschäftsvorfall gehört.|
@@ -574,7 +574,7 @@ Dabei sollte die Zuordnung so tief wie möglich ansetzen, damit bei der Kostenre
 Tabelle: persons (legal_entities) – natürliche und juristische Personen und Gruppen von Personen
 
 | Spalte| Deutsche Bezeichnung| Datentyp| Bemerkung|
-|-- | --| --| --|
+|---|---|---|---|
 | id| Personen-ID| varchar| Primärschlüssel Rechtssubjekt|
 | person_kind| Art| int| |
 | person_name| Name| varchar| Je nach Art wird der Name unterschiedlich unterteilt.|
@@ -584,7 +584,7 @@ Tabelle: persons (legal_entities) – natürliche und juristische Personen und G
 
 
 |Dimension|Ausprägung (verfeinern <> aggregieren|
-|-- |-- |
+|---|---|
 |1. Güter|Leistung - Produkt – Produktgruppe – Produktbereich – Produktfeld (Politikfeld)|
 |2. Rechtssubjekt|Fachbereich – Dezernat – Gemeinde – (Land-)Kreis – Region – Bundesland - Bund|
 |3. Zeit|Datum+Uhrzeit – Tag – Woche – Monat – Jahr – Jahre|
@@ -696,7 +696,7 @@ Der Zusatz ist auch fachlich nicht korrekt, weil eine Bilanz eine Vermögensaufs
 Auch wenn der Begriff „Immaterieller Vermögensgegenstand“ im Buchhaltungskontext geläufig ist, bleibt er sprachlich und fachlich falsch und sollte durch die korrekte Bezeichnung „Immaterielle Güter“ ersetzt werden. Auch im englischsprachigen Raum spricht man von „intangible assets“ und nicht „intangible asset items“.
 Streng fachlich betrachtet ist Vermögen grundsätzlich immateriell, weil Vermögen die subjektiven Rechte sind und nicht die damit verbundenen Sache, wie z.B. ein konkretes bebautes Grundstück. In der Bilanz seht im Falle eines bebauten Grundstückes der Wert des Eigentumsrechtes (= Vermögen) und nicht der Wert des realen bebauten Grundstückes.
 
-###11.5 Überflüssige Zusätze weg lassen
+### 11.5 Überflüssige Zusätze weg lassen
 
 Eine Bilanz ist eine Stichtagsbetrachtung und daher sollten sich alle Daten der Bilanz auf den 31.12. des entsprechenden Jahres beziehen.
 Alle Wertansätze der Bilanz beziehen sich auf den Buchwert.
@@ -729,7 +729,7 @@ Wie den NKF Handreichungen zu entnehmen ist (Seite 2218 ff) soll die Gliederung 
 3. Minderheitsbeteiligungen (<20%)
 Bei dieser Gliederung entsteht auch nicht die missverständliche Bezeichnung, dass eine Stiftung als verbundenes Unternehmen bezeichnet wird.
 Vorschlag: In der Bezeichnung von Verfeinerungen die Kriterien und den Zweck deutlich zum Ausdruck bringen.
-###11.8 Sparkassen
+#### 11.8 Sparkassen
 Im § 1 des SpkG heißt es wörtlich: Gemeinden oder Gemeindeverbände können **Sparkassen als ihre Wirtschaftsunternehmen** errichten.
 Sparkassen dann im nächsten Satz vom Jahresabschluss der Gemeinden auszuschließen trägt nicht zur Transparenz und Bilanzwahrheit bei.
 Der gute Grund Sparkassen nicht in den Jahresabschluss einer Gemeinde einzubeziehen liegt darin, dass eine Konsolidierung den Jahresabschluss der Gemeinde völlig entstellen würde. Beispielsweise ist die Bilanzsumme der Stadtsparkasse Düsseldorf ungefähr genau so groß wie die Bilanzsumme der Stadt Düsseldorf.
