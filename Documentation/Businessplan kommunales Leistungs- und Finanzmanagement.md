@@ -10,8 +10,6 @@ Caveat:  Name in Findung: iNKF, NKF+, KLF werden synonym verwendet
 ```
 
 [TOC]
-[toc]
-__TOC__
 
 - [1. Mission](#1-mission)
     - [**Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**](#brger-zur-haushaltskompetenz-ihrer-stadt-oder-gemeinde-befhigen)
@@ -26,8 +24,13 @@ __TOC__
 - [5 Marktlage](#5-marktlage)
 - [6. Technische Details](#6-technische-details)
     - [6.1 Buchhaltung](#61-buchhaltung)
-    - [5.3 Die Struktur der Ausgangsdaten](#53-die-struktur-der-ausgangsdaten)
-    - [7.4 Datenbankdesign](#74-datenbankdesign)
+    - [6.2 Die Struktur der Ausgangsdaten](#62-die-struktur-der-ausgangsdaten)
+    - [6.3 Datenbankdesign](#63-datenbankdesign)
+    - [6.4 Begriffliche Details](#64-begriffliche-details)
+	- [6.5 Sparkassen](#65-sparkassen)
+	- [6.6 Leistungsspezifikation](#66-leistungsspezifikation)
+	- [6.7 Neue Finanzpositionen](#67-neue-finanzpositionen)
+
 - [Glossar](#glossar)
 
 
@@ -216,7 +219,7 @@ Zum einen soll nun das (Graph-)Datenbank-Modell als Präkursor für das zu entwi
 Wikipedia und, für das semantische Web, DBpedia sind Beispiele und Ansporn wie durch Kooperation und persönliches Engagement ein Werk entstehen kann, das selbst die besten und renommiertesten Lexika überflügelt hat.
 
 
-### 4.2.3 Transparenz und Komplexitätsreduktion
+#### 4.2.3 Transparenz und Komplexitätsreduktion
 
 Die semantische Präsentation von Daten bedeutet, dass Informationen aus den Daten (Objekte) die Fragestellung (Prädikate) beantwortend illustrieren, und so Erkenntnisgewinn für den Betrachter (Subjekt) ermöglichen.
 
@@ -470,7 +473,7 @@ Bei einer virtuellen Buchhaltung können aus den gleichen primären Geschäftsvo
 
 
 
-### 5.3 Die Struktur der Ausgangsdaten
+### 6.2 Die Struktur der Ausgangsdaten
 
 Geht man davon aus, dass die zu visualisierenden Daten wie in den Dateien `Bilanz2016.txt` und `Ergebnis2016.txt` aufgebaut sind, dann lässt sich hierzu folgendes sagen:
 Die Datei `Bilanz.txt` hat folgende Struktur:
@@ -503,9 +506,9 @@ benötigt: für jede Dimension entlang derer die Daten aggregiert werden sollen,
 |Normalisierung | reduziert das Datenvolumen drastisch und wenn die Daten nur auf den untersten Aggregationsstufen der Dimensionen vorliegen, dann können die Daten dynamisch durch den Anwender gesteuert aggregiert werden.|
 
 
-## 7.4 Datenbankdesign
+## 6.3 Datenbankdesign
 
-### 7.4.1 Zielsetzung Datenbankdesign
+### 6.3.1 Zielsetzung Datenbankdesign
 
 Visualisierung NKF-Daten: Die Datenbank soll so gestaltet sein, dass damit die Visualisierung der Leistungsstruktur der NKF-Daten als Benutzerinterface durchgeführt werden kann.
 Multi-NKF fähig: Die NKF-Daten können sowohl in der Rechnungslegungsvariante einer bestimmten Kommune als auch in einer kommunenübergreifenden einheitlichen Sicht dargestellt werden.
@@ -514,7 +517,7 @@ Das NKF ist ein Beispiel für einen bestimmten Rechnungslegungsstandard. Dadurch
 Konkret implementiert wird nur der NKF-Standard, der als Ausgangspunkt und Beispiel für andere Rechnungslegungsstandards verwendet werden kann.
 Die Datenbank wird so strukturiert, dass sie als Grundlage für das operative System der Phase 2 verwendet werden kann. Um diese Ziele zu erreichen werden die Daten in einer Art universellen Buchhaltung dokumentiert.
 
-### 7.4.2 Grundstruktur der Datenbank
+### 6.3.2 Grundstruktur der Datenbank
 
 Buchhaltungen dokumentieren vermögensrelevante Geschäftsvorfälle in Form von Buchungssätzen.
 Die entscheidende Idee für die Grundstruktur der Datenbank ist, dass nicht die Buchungssätze, sondern die Geschäftsvorfälle selbst in einer universellen Form gespeichert werden.
@@ -622,12 +625,12 @@ Die fünf Dimensionen Güter, Rechtssubjekt, Zeit, Wertansatz und Vermögen bild
 Wie im Folgenden gezeigt werden wird, kann jede beliebige Rechnungslegung als Schnitte, Projektionen und Teilmengen dieses 5-dimensionalen Buchungsraumes betrachtet werden.
 Durch die Strukturierung der Daten in diese Dimension wird es möglich, dynamisch unterschiedliche Rechnungslegungssysteme darzustellen. Eine bestimmte Rechnungslegung kann als eine bestimmte Betrachtungsperspektive aufgefasst werden.
 
-### 5.5 Dimension Rechtssubjekt (Raum) (Wer? / Wo?)
+#### 6.3.3 Dimension Rechtssubjekt (Raum) (Wer? / Wo?)
 Die Güter, die eine Kommune erstellt, beziehen sich fast ausschließlich auf den geografischen Raum der Kommune.
 Die Rechtssubjektdimension bietet daher zwei gleichwertige Interpretationen. Zum einen wird der geographische Raum abgebildet und zum andern die entsprechenden Gebietskörperschaften als Rechtssubjekte,  Teil eines Rechtssubjektes oder Gruppen von Rechtssubjekten, die Vermögen haben und Leistungen empfangen oder erbringen.
 Darüber hinaus besteht die Möglichkeit der Erweiterung auf gemeinnützig tätige Gruppen und Vereine, damit eine ganzheitliche Sicht staatlichen und gemeinnützigen Handelns und Wirkens ermöglicht wird.
 
-#### 5.5.1 Geographischer Raum
+##### 6.3.3.1 Geographischer Raum
 Die geographischen Gebiete bekommen auf der untersten Ebene eine eindeutige Bezeichnung. Danach können die Gebiete nach Belieben hierarchisch zu größeren Gebieten zusammengefasst werden.
 Da sich durch Verwaltungsreformen Gebietsgrenzen verschieben können, werden die Hierarchien mit einem Beginn- und Enddatum versehen. Der dadurch angegebene Zeitraum begrenzt die offizielle Geltungsdauer der Hierarchie. Durch den Vergleich unterschiedlicher Hierarchien könnten so die Auswirkungen von Gebietsreformen nachvollzogen werden.
 
@@ -636,32 +639,21 @@ Auf der Basis der Standard-Hierarchie lassen sich dann beliebige weitere Hierarc
 
 Die Hierarchien bieten Möglichkeiten wie die Daten verfeinert oder aggregiert werden können.
 
-#### 5.5.3 Externe Effekte berücksichtigen
-Die Güter für ihre Bürger können direkt durch die Gebietskörperschaften oder indirekt z.B. über Vereine geleistet werden.
-Beispielsweise könnte ein öffentliches Schwimmbad durch die Stadt direkt oder einen Verein indirekt betrieben werden. In beiden Fällen erhalten die Bürger das gleiche Gut: Die Nutzung des Schwimmbades.
-Zieht man in die Haushaltsbetrachtungen nur die direkten Leistungen der Gemeinden in Betracht, dann entstehen aus der Sicht der Buchhaltung Aufwand (= Zuschuss für den Schwimmbadverein), dem keine Leistungen an die Bürger gegenüber steht.
-Dieser Sachverhalt könnte voreilig und fälschlicherweise zu dem Schluss führen, die Zuschüsse für die Vereine zu streichen, obwohl diese Zuschüsse bei genauer Betrachtung eine sehr effektive und kostengünstige Art sind, Güter für die Bürger bereit zu stellen.
-Um diese voreiligen und eventuell falschen Schlüsse zu vermeiden kann das System dahingehend erweitert werden, dass alle für das Gemeinwohl tätigen Gruppen und Vereine mit in die Rechnungslegung und Betrachtung einbezogen werden können.
-Die Erweiterung geschieht einfach dadurch, dass die Vereine genauso wie die Gemeinden erfasst und in die Hierarchien eingebunden werden.
-Das Interesse der Vereine ihre Daten in das System einzupflegen besteht darin, dass sie auf diese Weise die Zuschüsse, die sie vom Staat erhalten nachvollziehbar rechtfertigen können.
-Technisch gesehen ist es für das System egal, ob das erfasste Rechtsubjekt eine Gebietskörperschaft oder ein Verein ist.
-Diese Erweiterung bietet somit die Möglichkeit externe Effekte staatlichen Handelns sichtbar und messbar zu machen. Die Wirkung externer Effekte können so bei politischen Entscheidungen berücksichtigt werden.
-So könnten z.B. höhere Kosten für Jugendförderung und Bildungsausgaben durch prognostizierte geringere Sozialkosten begründet und später überprüft werden.
-
-### 5.5.5 Dimension Zeit (Wann?)
+##### 6.3.3.2 Dimension Zeit (Wann?)
 Alles Handeln und somit auch die Produktion von Gütern findet in der Zeit statt.
 Betrachtungen entlang der Zeitachse zeigen den Leistungsfluss und die Entwicklung des Vermögens und führen z.B. zur Ergebnisrechnung. Betrachtungen zu einem bestimmten Stichtag zeigen z.B. den Stand des Vermögens und führen zur Bilanz.
 In einem operativen System könnte man den Leistungsfluss und die Vermögensverfügungen zeitlich beliebig genau darstellen.
 In dem System der Phase 1 werden die Daten zu Jahresdaten aggregiert.
 Es bleibt aber den Datenprovidern überlassen, wie feingliedrig die Daten angeliefert werden, damit man z.B. auch eine unterjährige Entwicklung von Leistungen verfolgen kann.
 Als Datentyp wird für Zeit Datetime (YYYY-MM-DD HH:MM:SS) genommen.
-### 7.6 Dimension Wertansatz
+
+##### 6.3.3.3 Dimension Wertansatz
 Das Verfahren der Bewertung entscheidet im Rechnungswesen darüber, mit welchem Wertansatz ein Wirtschaftsgut bilanziert wird.
 Nichts hat einen Wert an und für sich. Alles bekommt einen Wert erst durch ein bestimmtes Bewertungsverfahren. Ein Stück bemaltes Papier, das für die einen entartete Kunst ist und verbrannt gehört, ist für andere mehrere Millionen Euro wert.
 Im wirtschaftlichen Kontext gibt es allerdings ein paar naheliegende Bewertungsmaßstäbe. Dazu zählen der Marktpreis, die fortgeführten Anschaffungs-, Herstellungs- oder Wiederbeschaffungskosten.
 Unterschiedliche Rechnungslegungssysteme unterscheiden sich insbesondere auch durch ihre unterschiedlichen Bewertungsrichtlinien.  Der „Fair Value“ (= Zeitwert, Marktwert) in einer IFRS-Bilanz für ein bestimmtes Gebäude könnte z.B. 10 Mill. € betragen. Das gleiche Gebäude könnte in einer Bilanz nach dem HGB nur 1 Mill. € angesetzt sein. Der Anschaffungswert dieses Gebäudes könnte 4 Mill. € betragen haben.
 
-### 5.5.7 Dimension Vermögen
+##### 6.3.3.4 Dimension Vermögen
 
 Alle Güter einschließlich deren Produktion und Verteilung haben einen rechtlichen Aspekt.
 Die bewertbaren Rechte und Pflichten, die einem Rechtsubjekt zugeordnet sind, nennt man Vermögen.
@@ -677,8 +669,20 @@ Open Source ist hierfür ein Beispiel: Einmal Kosten und dann unbeschränkter Nu
 
 Wir können zeigen, dass gemeinwohlorientiertes, nachhaltiges und gerechtes Wirtschaften nicht auf Kosten der Effizienz und Leistungsfähigkeit möglich, und sogar dem Paradigma Wachstum und Profit auf Kosten Anderer überlegen ist
 
+##### 6.3.3.5 Externe Effekte berücksichtigen
+Die Güter für ihre Bürger können direkt durch die Gebietskörperschaften oder indirekt z.B. über Vereine geleistet werden.
+Beispielsweise könnte ein öffentliches Schwimmbad durch die Stadt direkt oder einen Verein indirekt betrieben werden. In beiden Fällen erhalten die Bürger das gleiche Gut: Die Nutzung des Schwimmbades.
+Zieht man in die Haushaltsbetrachtungen nur die direkten Leistungen der Gemeinden in Betracht, dann entstehen aus der Sicht der Buchhaltung Aufwand (= Zuschuss für den Schwimmbadverein), dem keine Leistungen an die Bürger gegenüber steht.
+Dieser Sachverhalt könnte voreilig und fälschlicherweise zu dem Schluss führen, die Zuschüsse für die Vereine zu streichen, obwohl diese Zuschüsse bei genauer Betrachtung eine sehr effektive und kostengünstige Art sind, Güter für die Bürger bereit zu stellen.
+Um diese voreiligen und eventuell falschen Schlüsse zu vermeiden kann das System dahingehend erweitert werden, dass alle für das Gemeinwohl tätigen Gruppen und Vereine mit in die Rechnungslegung und Betrachtung einbezogen werden können.
+Die Erweiterung geschieht einfach dadurch, dass die Vereine genauso wie die Gemeinden erfasst und in die Hierarchien eingebunden werden.
+Das Interesse der Vereine ihre Daten in das System einzupflegen besteht darin, dass sie auf diese Weise die Zuschüsse, die sie vom Staat erhalten nachvollziehbar rechtfertigen können.
+Technisch gesehen ist es für das System egal, ob das erfasste Rechtsubjekt eine Gebietskörperschaft oder ein Verein ist.
+Diese Erweiterung bietet somit die Möglichkeit externe Effekte staatlichen Handelns sichtbar und messbar zu machen. Die Wirkung externer Effekte können so bei politischen Entscheidungen berücksichtigt werden.
+So könnten z.B. höhere Kosten für Jugendförderung und Bildungsausgaben durch prognostizierte geringere Sozialkosten begründet und später überprüft werden.
 
-### 5.11 Teil-Bereiche einer kommunalen Rechnungslegung
+
+#### 6.3.4 Teil-Bereiche einer kommunalen Rechnungslegung
 
 Neben den bisher diskutierten Ebenen/Bereiche könnte überlegt werden, ob nicht folgende Teil-Bereiche separat ausweisbar sein sollten:
 1. Leistungserstellung (Produkterstellung)
@@ -694,7 +698,7 @@ Bei z.B. Steuerforderungen gibt es keine Restlaufzeit. Solange sie nicht fällig
 In der Finanzstatistik wird auch nicht ausgewiesen, wie hoch die dubiosen Forderungen sind und es gibt auch kein Aufwandskonto, das die Abschreibungen auf z.B. Steuerforderungen erfasst. Es gibt zwar ein Aufwandskonto Abschreibungen auf Finanzanlagen, aber Steuerforderungen, Gebührenforderungen, etc. sind keine Finanzanlagen.
 
 
-### 11.2 Erkenntnisgewinn der Auszahlungskonten
+#### 6.3.5 Erkenntnisgewinn der Auszahlungskonten
 
 Frage: Was ist mit Hinblick auf die Ziele des NKFs überhaupt der Erkenntnisgewinn, der die Aufteilung der Zahlungen nach Produktgruppen und sog. Auszahlungskonten begründet?
 
@@ -709,7 +713,9 @@ Eine zusätzliche Aufteilung dieser Buchungssätze nach Produkten und den sog. A
 Beispiel:
 Im Jahr 2010 betrug für Wiesbaden der Saldo des Ertragskonto Grundsteuer B 133.120.539,00 €. Auf dem entsprechenden Zahlungseingangskonto Grundsteuer B betrug der Saldo 132.796.774,00 €. Die Differenz beträgt 0,2% und ist der Saldo aus verspäteten Zahlungen der Vorjahre und noch nicht geleisteten, aber fällige Zahlungen des laufenden Jahres.
 
-### 11.4 Sprachlich und fachlich klare, einheitliche und präzise Bezeichnungen der Konten
+### 6.4 Begriffliche Details
+
+#### 6.4.1 Sprachlich und fachlich klare, einheitliche und präzise Bezeichnungen der Konten
 
 Beispiel: Immaterielle Vermögensgegenstände anstatt Immaterielle Güter oder Immaterialgüter
 
@@ -719,14 +725,8 @@ Der Zusatz ist auch fachlich nicht korrekt, weil eine Bilanz eine Vermögensaufs
 Auch wenn der Begriff „Immaterieller Vermögensgegenstand“ im Buchhaltungskontext geläufig ist, bleibt er sprachlich und fachlich falsch und sollte durch die korrekte Bezeichnung „Immaterielle Güter“ ersetzt werden. Auch im englischsprachigen Raum spricht man von „intangible assets“ und nicht „intangible asset items“.
 Streng fachlich betrachtet ist Vermögen grundsätzlich immateriell, weil Vermögen die subjektiven Rechte sind und nicht die damit verbundenen Sache, wie z.B. ein konkretes bebautes Grundstück. In der Bilanz seht im Falle eines bebauten Grundstückes der Wert des Eigentumsrechtes (= Vermögen) und nicht der Wert des realen bebauten Grundstückes.
 
-### 11.5 Überflüssige Zusätze weg lassen
 
-Eine Bilanz ist eine Stichtagsbetrachtung und daher sollten sich alle Daten der Bilanz auf den 31.12. des entsprechenden Jahres beziehen.
-Alle Wertansätze der Bilanz beziehen sich auf den Buchwert.
-Zusätze wie Buchwert am 31.12. des Haushaltsjahres können daher entfallen.
-Wenn für weitergehende Informationen, wie z.B. bei der Entwicklung des Anlagevermögens die Anschaffungs-/Herstellungskosten oder der Anfangsbestand ausgewiesen werden, dann genügt hier ein entsprechender Zusatz.
-
-### 5.5.9 Wertansätze
+#### 6.4.2 Wertansätze
 Die Wertansätze in der Gemeindebilanz unterliegen nicht den Interessenskonflikten, die sich bei Unternehmen aufgrund der Besteuerung und dem Vorsichtsprinzip ergeben. Weder werden Gewinne ausgeschüttet noch versteuert und auch eine Liquidation des Gemeindevermögens ist ausgeschlossen. Daher könnten Aspekte der Transparenz, Vergleichbarkeit und Bilanzwahrheit stärker beachtet werden.
 Im Kontext von Kommunen und mit Hinblick auf Transparenz und Aussagefähigkeit sollten die Wertansätze überdacht werden.
 Zunächst scheint es sinnvoll zu sein, dass beim Anlagevermögen nicht nur der Buchwert, sondern auch die Anschaffungs-/Herstellungskosten ausgewiesen werden.
@@ -738,7 +738,7 @@ Ein so gebildeter Vergleichswert würde in der Tendenz bei Gebäude dazu führen
 Möglicherweise wären der Wiederbeschaffungs- oder Marktwert die besseren Ansätze.
 Dabei muss man nicht ausschließen, dass auf entsprechenden Unterkonten auch die Herstellungskosten ausgewiesen werden und sich die unterschiedlichen Wertansätze gegenseitig ableiten lassen.
 
-### 5.5.10 Abgrenzungen und Begriffswahl
+### 6.4.3 Abgrenzungen und Begriffswahl
 
 Teilweise ist schwer zu erkennen, nach welchen Kriterien und zu welchem Zweck die Verfeinerung von Bilanzpositionen vorgenommen wurde.
 Beispiel: Finanzanlagen:
@@ -752,7 +752,9 @@ Wie den NKF Handreichungen zu entnehmen ist (Seite 2218 ff) soll die Gliederung 
 3. Minderheitsbeteiligungen (<20%)
 Bei dieser Gliederung entsteht auch nicht die missverständliche Bezeichnung, dass eine Stiftung als verbundenes Unternehmen bezeichnet wird.
 Vorschlag: In der Bezeichnung von Verfeinerungen die Kriterien und den Zweck deutlich zum Ausdruck bringen.
-#### 11.8 Sparkassen
+
+#### 6.5 Sparkassen
+
 Im § 1 des SpkG heißt es wörtlich: Gemeinden oder Gemeindeverbände können **Sparkassen als ihre Wirtschaftsunternehmen** errichten.
 Sparkassen dann im nächsten Satz vom Jahresabschluss der Gemeinden auszuschließen trägt nicht zur Transparenz und Bilanzwahrheit bei.
 Der gute Grund Sparkassen nicht in den Jahresabschluss einer Gemeinde einzubeziehen liegt darin, dass eine Konsolidierung den Jahresabschluss der Gemeinde völlig entstellen würde. Beispielsweise ist die Bilanzsumme der Stadtsparkasse Düsseldorf ungefähr genau so groß wie die Bilanzsumme der Stadt Düsseldorf.
@@ -816,29 +818,15 @@ Eine nutzungs- bzw. produktbereichsorientierte Gliederung könnte wie folgt auss
 
 Die Trennung zwischen Gebäuden mit und ohne kommunaler Nutzung ist in sofern wichtig, weil Gebäude ohne kommunale Nutzung veräußert werden können, ohne die Leistungen der Gemeinde einzuschränken. Nicht kommunal genutztes Vermögen ist eine Art Reserve für schlechte Zeiten.
 
-#### 5.5.11 Leistungen
 
-Meine Anregung wäre, dass Sie in ihrem Leistungskatalog die primären Leistungsempfänger in einer eigenen Spalte klar kennzeichnen. Damit könnte man den Leistungsstrom besser erkennen.
-
-### Vergleichbarkeit von Leistungen
-
-Im ersten Fall könnte man die gemessenen und bewerteten Leistungen zwischen unterschiedlichen Gemeinden vergleichen und den Kosten gegenüber stellen.
-Im zweiten Fall können die Leistungen nicht mehr verglichen werden. Die Kommune A, die
-1. ihre Verkehrsinfrastruktur rechtzeitig wartet und instand setzt,
-2. Baustellen so schnell wie möglich beseitigt,
-3. eine optimale Verkehrsflusssteuerung hat und
-4. Straßen nur dort baut und ausbaut, wo sie tatsächlich benötigt werden,
-könnte im Vergleich zu einer Kommune B, die einen oder mehrere dieser Punkte vernachlässigt, erheblich geringere Kosten haben. - Trotzdem würde in der Rechnungslegung im 2. Fall der Eindruck entstehen, dass die Kommune B mehr Leistungen für ihre Bürger erbringt, als die Kommune A.
-
-
-#### 5.5.12 Leistungsspezifikation
+#### 6.6 Leistungsspezifikation
 Leistungsspezifikationen öffentlicher Leistungen sind die wesentlichen Eigenschaften einer Leistung, nach denen die Leistung gemessen werden kann und ein zugeordneter Gewichtungsfaktor, mit wessen Hilfe ähnliche Leitungen gruppiert werden können.
 
 Produktorientierte Teilfinanzpläne sind kein Feature der kaufmännischen Buchführung, sondern der Kameralistik:
 - keine Kosten- und Leistungsrechnung,
 - keine Zuordnung der anteiligen Erträge aus Steuern für die Produkte.
 
-#### 5.5.13 Neue Finanzpositionen
+#### 6.7 Neue Finanzpositionen
 
 - Veräußerung von Vermögensgegenständen und Finanzanlagen (führen zu Einzahlungen)
 - Außerordentliche Aufwendungen, z.B. für Naturkatastrophen (führen zu Auszahlungen)
