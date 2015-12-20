@@ -8,12 +8,11 @@ Stand:   20.12.2015
 Status:  in Arbeit
 Caveat:  Name in Findung: iNKF, NKF+, KLF werden synonym verwendet
 ```
-
-    - [1. Mission](#1-mission)
-      - [**Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**](#brger-zur-haushaltskompetenz-ihrer-stadt-oder-gemeinde-befhigen)
-    - [2 Zielstellung](#2-zielstellung)
-      - [2.1  Phase 1: Visualisierung der NKF-Inhalte](#21--phase-1-visualisierung-der-nkf-inhalte)
-      - [2.2 Phase 2: iNKF-Studio -- Kommunale Finanz-Management-Software](#22-phase-2-inkf-studio----kommunale-finanz-management-software)
+- [1. Mission](#1-mission)
+  - [**Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**](#brger-zur-haushaltskompetenz-ihrer-stadt-oder-gemeinde-befhigen)
+- [2 Zielstellung](#2-zielstellung)
+  - [2.1  Phase 1: Visualisierung der NKF-Inhalte](#21--phase-1-visualisierung-der-nkf-inhalte)
+  - [2.2 Phase 2: iNKF-Studio -- Kommunale Finanz-Management-Software](#22-phase-2-inkf-studio----kommunale-finanz-management-software)
   - [3. Probleme von Kameralistik und herkömmlichem NKF](#3-probleme-von-kameralistik-und-herkmmlichem-nkf)
       - [3.1.1 Problem (NKF): Diskrepanz von Information und Inhalt](#311-problem-nkf-diskrepanz-von-information-und-inhalt)
       - [3.1.2 Lösung (iNKF) Kosten und Nutzen einander zuordnen](#312-lsung-inkf-kosten-und-nutzen-einander-zuordnen)
