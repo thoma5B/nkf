@@ -1,5 +1,5 @@
 
-# iNKF -- Infrastruktur für das Neue Kommunale Finanzmanagement
+# NKF+/iNKF -- Infrastruktur für das Neue Kommunale Finanzmanagement
 #### Business-Case für ein kommunale Data-Warehousing-Infrastruktur (www.egov-infrastructure.org) und die Visualisierung kommunaler Finanzverwaltungsdaten
 
 ```
@@ -49,7 +49,7 @@ Die Webanwendung bietet eine klare und benutzerfreundliche Oberfläche, die die 
 
 > offensichtlich und verständlich
 
-Abgeordnete und interessierte Bürger* sollen einfacher, effektiver und verständlicher Zugang zu den kommunalen Daten erhalten. Dadurch wird Transparenz aktiv hergestellt und so eine wichtige politische Forderung erfüllt. Verständlichkeit entsteht dabei durch Darstellung der Fakten, ohne eine implizite Interpretation zu liefern. Das Gremium (Gemeinderat, etc.pp.) wird bei seiner Kontrollfunktion unterstützt und kann objektiv bessere finanzierungsrelevante Entscheidungen treffen.
+Abgeordnete und interessierte BürgerInnen sollen einfacher, effektiver und verständlicher Zugang zu den kommunalen Daten erhalten. Dadurch wird Transparenz aktiv hergestellt und so eine wichtige politische Forderung erfüllt. Verständlichkeit entsteht dabei durch Darstellung der Fakten, ohne eine implizite Interpretation zu liefern. Das Gremium (Gemeinderat, etc.pp.) wird bei seiner Kontrollfunktion unterstützt und kann objektiv bessere finanzierungsrelevante Entscheidungen treffen.
 
 > Kosten-Nutzen-Informationen statt abstrakter Kostenstellen
 
@@ -239,33 +239,43 @@ Für die Visualisierung der Leistungsstruktur stehen folgende Techniken zur Verf
 
 
 | Dynamische Tabellen | Diagramme | Karten |
-|--|--|--|
+|---|---|---|
 |Haushaltsdaten in dynamischen Tabellen angezeigen (dynamisch: der Anwender kann entlang der Dimensionen Daten aggregieren oder verfeinern) | Balken-, Tortendiagramme | Darstellung geografischer Information, Choropleth |
 
 >Abbildung: Beispiel Choropleth
 ![Abbildung: Beispiel Choropleth; cc: Maximilian Dörrbecker, wikimedia](https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/SiedlungsstrukturelleRaumtypen1996.png/800px-SiedlungsstrukturelleRaumtypen1996.png)
 cc: Maximilian Dörrbecker, wikimedia
 
-- Einbindung mittels eines open-source Web-Grafik-Framework, wie das auf D3 basierende [Chiasm](https://github.com/chiasm-project/chiasm). Chiasm ermöglicht die reaktive Interaktion des Benutzers mit den Daten. Veränderungen in der Auswahl werden sofort grafisch abgebildet. Das ermöglich Interaktions-Techniken wie *zoom* und *chrossfilter*.
+- Einbindung mittels eines open-source Web-Grafik-Framework, wie das auf D3 basierende [Chiasm](https://github.com/chiasm-project/chiasm). Chiasm ermöglicht die reaktive Interaktion des Benutzers mit den Daten. Veränderungen in der Auswahl werden sofort grafisch abgebildet. Das ermöglich Interaktions-Techniken wie *zoom* und *crossfilter*.
 
 
-## 5 Marktlage
+## 5 Marktanalyse
 
-#### 5.1.1 Problem:
+In der Bundesrepublik ca. 11.000 Gemeinden, davon 77 Groß- und 600 Mittelstädte (mit mehr als 100.000, bzw. 20.000 Einwohnern). Weltweit sind es ca 2 Millionen Gemeinden und 2,896 Städte mit mehr als 150.000 Einwohnern. 
+
+Kosteneinsparung
+Synergieeffekte durch eine opensource-Lösung an denen sich alle Gemeinden beteiligen und von der alle Profitieren. Allein für die 11.000 Gemeinden in Deutschland, wären mit €100,- pro Gemeinde schon eine veritable Software mit vielfältigen Sonderanforderungen realisierbar/darstellbar.
+
+### 5.1 Umstellung
 
 Für Gemeinden und die öffentliche Hand ist es im Allgemeinen mit großem Aufwand verbunden, Änderungen, Erweiterunge, Verbesserungen ihrer IT umzusetzen. Das liegt an der dünnen Personaldecke und der typischerweise spezifisch nicht-IT-orientierten Amtsführung.
-#### 5.1.2 Lösung:
-#### 5.2.1 Problem:
+
+#### Lösung
+
+### 5.2 Problem
+
 Kompetenz der Gemeindeverwaltung auf regelgenaue Ausübung bedacht, ordnungspolitisch orientiert
 Damit geht ein großer Informationsverlust auf der Bilanziellen Ebene und damit Entscheidungsschwäche auf Investitions-Ebene einher
-#### 5.2.2 Lösung:
+
+#### Lösung
+
 Informations-Dienstleister für Kommunen
 * Erträge und Aufwendungen in einen sachlogischen Zusammenhang mit den Erlösen und Kosten stellen
 * spezifischen Aufgaben, die die verschiedenen Schichten der Buchhaltung haben berücksichtigen
 * Informationen, die für die politischen und wirtschaftlichen Entscheidungen der Gemeinden bereitstellen
 * Lebensqualität erfassen und sichtbar machen
 
-##### Negativ-Beispiele
+#### Negativ-Beispiele
 * Selbst für eine kleine Stadt wie z.B. Heppenheim mit 25.000 Einwohner, einer Stadtverwaltung von 234 Mitarbeitern und einem Ertrag bzw. Aufwand von ca. 38 bzw. 43 Mill. Euro hat dieser Jahresbericht 580 Seiten. Er übertrifft an Seiten den Jahresbericht der der Deutschen Bank mit ca. 98.000 Mitarbeitern und einem Ertrag bzw. Aufwand von 32 bzw. 26 Mrd. Euro.
 
 * Beispielsweise werden in den Finanzplänen der Stadt Bottrop die Positionen laut Spaltenüberschrift nach Einzahlungs- und Auszahlungsarten gruppiert. Tatsächliche werden sie jedoch nach Ertrags- und Aufwandsarten gruppiert. Die Stadt Bochum vermeidet dies indem sie auf eine Spaltenüberschrift verzichtet.
