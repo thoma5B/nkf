@@ -12,7 +12,8 @@ Caveat:  Name in Findung: iNKF, NKF+, KLF werden synonym verwendet
 [TOC]
 
 - [1. Mission](#1-mission)
-    - [**Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**](#brger-zur-haushaltskompetenz-ihrer-stadt-oder-gemeinde-befhigen)
+    - [**Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen**](#brger-zur-haushaltskompetenz-ihrer-stadt-oder-gemeinde-befhigen)
+    - [**Einfach gut verwalten**](#einfach-gut-verwalten)
 - [2 Zielstellung](#2-zielstellung)
     - [2.1  Phase 1: Visualisierung der NKF-Inhalte](#21--phase-1-visualisierung-der-nkf-inhalte)
     - [2.2 Phase 2: iNKF-Studio -- Kommunale Finanz-Management-Software](#22-phase-2-inkf-studio----kommunale-finanz-management-software)
@@ -36,15 +37,17 @@ Caveat:  Name in Findung: iNKF, NKF+, KLF werden synonym verwendet
 
 ### 1. Mission
 
-#### **Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**
+#### **Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen** 
 
 
 1. Die **Webanwendung** liefert **Daten-Visualisierung kommunaler Haushaltsdaten** inklusive vielfältiger **Analyse**-Tools. Sie unterstützt kommunale **Abgeordnete** in ihrer Arbeit und gibt engagierten **Bürgern** ein mächtiges **Werkzeug** in die Hand, welches es ermöglicht, die Leistungs-Perfomance ihrer Stadt- oder Gemeindeverwaltung vergleichend und **nutzenorientiert** kritisch zu **bewerten**.
 
+#### **Einfach gut verwalten** 
+
 2. **IT-Infrastruktur** und **Datenarchitektur** für die Implementierung einer sachgemäßen **Buchhaltung** im Sinne der **neuen kommunalen Finanzordnung (NKF)**, welche die Unzulänglichkeiten herkömmlicher, auf Unternehmen ausgelegter Buchhaltungssysteme überwindet.
 
 ### 2 Zielstellung
-#### 2.1  Phase 1: Visualisierung der NKF-Inhalte
+#### 2.1  **Bürger zur Haushaltskompetenz ihrer Stadt oder Gemeinde befähigen.**: Visualisierung der NKF-Inhalte
 Die Webanwendung bietet eine klare und benutzerfreundliche Oberfläche, die die Daten des NKF-Systems in Form von zusammenfassenden Tabellen, Infografiken und farbigen Landkarten darstellt.
 
 > offensichtlich und verständlich
@@ -251,7 +254,7 @@ cc: Maximilian Dörrbecker, wikimedia
 
 ## 5 Marktanalyse
 
-In der Bundesrepublik ca. 11.000 Gemeinden, davon 77 Groß- und 600 Mittelstädte (mit mehr als 100.000, bzw. 20.000 Einwohnern). Weltweit sind es ca 2 Millionen Gemeinden und 2,896 Städte mit mehr als 150.000 Einwohnern. 
+In der Bundesrepublik gibt es ca. 11.000 Gemeinden, davon 77 Groß- und 600 Mittelstädte (mit mehr als 100.000, bzw. 20.000 Einwohnern). Weltweit sind es ca 2 Millionen Gemeinden und 2,896 Städte mit mehr als 150.000 Einwohnern. 
 
 Kosteneinsparung
 Synergieeffekte durch eine opensource-Lösung an denen sich alle Gemeinden beteiligen und von der alle Profitieren. Allein für die 11.000 Gemeinden in Deutschland, wären mit €100,- pro Gemeinde schon eine veritable Software mit vielfältigen Sonderanforderungen realisierbar/darstellbar.
