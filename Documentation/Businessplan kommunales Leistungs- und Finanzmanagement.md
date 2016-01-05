@@ -18,7 +18,12 @@ Caveat:  Name in Findung: iNKF, NKF+, KLF werden synonym verwendet
     - [2.1  Phase 1: Visualisierung der NKF-Inhalte](#21--phase-1-visualisierung-der-nkf-inhalte)
     - [2.2 Phase 2: iNKF-Studio -- Kommunale Finanz-Management-Software](#22-phase-2-inkf-studio----kommunale-finanz-management-software)
 - [3. Probleme von Kameralistik und herkömmlichem NKF](#3-probleme-von-kameralistik-und-herkmmlichem-nkf)
-    - [3.4  Übergeordnete Ziele](#34--bergeordnete-ziele)
+    - [3.1. Diskrepanz von Information und Inhalt](#31-diskrepanz-von-information-und-inhalt)
+    - [3.2. Kassenorientierung  als disfunktionales Anreizsystem](#32-kassenorientierung--als-disfunktionales-anreizsystem)
+    - [3.3. Komplex und kompliziert](#33-komplex-und-kompliziert)
+        - [Negativbeispiel: Hierarchien in Matrixstruktur](#negativbeispiel-hierarchien-in-matrixstruktur)
+    - [3.4. Streit um die „richtige“ Rechnungslegung](#34-streit-um-die-richtige-rechnungslegung)
+    - [3.5.  Übergeordnete Ziele](#35--bergeordnete-ziele)
 - [4 Technologie](#4-technologie)
     - [4.1 Visualisierung und Darstellung der NKF-Inhalte](#41-visualisierung-und-darstellung-der-nkf-inhalte)
     - [4.2 Digitale Infrastruktur-Architektur](#42-digitale-infrastruktur-architektur)
@@ -92,7 +97,7 @@ Beschrieben wird dieses System in den über 3.000 Seiten umfassenden NKF-Handrei
 
 Diese angestrebten Ziele sind zwar genau richtig, aber aufgrund einiger Spezifika bei der Implementierung können diese gar nicht, oder nur sehr eingeschränkt, erreicht werden. Im folgenden werden diese Probleme erörtert.
 
-#### 3.1.1 Problem (NKF): Diskrepanz von Information und Inhalt
+### 3.1. Diskrepanz von Information und Inhalt
 
 Inhalte des NKF-System geben nicht die Informationen wieder, die den Daten kommunalwirtschaftliche Bedeutung geben. Und die Ergebnisrechnung eines Fachbereichs alleine lässt im Allgemeinen eben keine Schlussfolgerungen auf die Wirtschaftlichkeit dieses Fachbereichs zu:
 
@@ -102,11 +107,11 @@ Im Gegensatz dazu hat Oberhausen für die gleiche Produktgruppe einen Aufwand an
 Dieses einfache Beispiel legt nahe, dass es mit einem einfachen Vergleich von Produkten und Ergebnispositionen nicht getan ist. Selbst Daten, die in einem Verhältnis von 5:1 vorliegen und damit der Bevölkerung der beiden Städte entsprechen, sind mit Vorsicht zu genießen. Zum einen ist die Aufwand-Ertrags-Ebene bei Kommunen keine geeignete Vergleichsebene. Zum anderen weiß man nicht, ob die Produktstruktur vergleichbar ist. Diese Entscheidungen führten auch dazu, dass das NKF-System unnötig komplex wurde.
 
 
-#### 3.1.2 Lösung (iNKF) Kosten und Nutzen einander zuordnen
+#### Lösung (iNKF): Kosten und Nutzen einander zuordnen
 
 Durch die korrekte Zuordnung von Teilbilanzen und Fakten kann  gezeigt werden, ob, in welchem Umfang und in welcher Qualität eine Gemeinde ihre Aufgaben erfüllt hat.
 
-#### 3.2.1 Problem (NKF): Kassenorientierung  als disfunktionales Anreizsystem
+### 3.2. Kassenorientierung  als disfunktionales Anreizsystem
 
 > In zeiten knapper Kassen werden wichtige Entscheidungen, die die Zukunft der Kommune determinieren, als unbezahlbar abgetan. Das kann sehr negative Konsequenzen auf die Beteiligungsdemokratie haben und eine Investitions-Stau auslösen. Leistungskürzungen und Erhöhung der Abgabenlast werden honoriert. Das führt zu Austerität statt solider, nachhaltiger Finanzen.
 
@@ -116,7 +121,7 @@ Aus der Sicht der doppelten Buchführung stehen in einer Gemeinde die Gewinner u
 
 * Vergleicht man die Ergebnisrechnung einer Gemeinde mit einem Supermarkt, dann wäre das ungefähr so, wie wenn man behaupten würde, dass nur die Kassierer/innen einen Gewinn erwirtschaftet haben und alle anderen Mitarbeiter machen nur Verluste und kosten nur Geld.
 
-#### 3.2.2 Lösung (iNKF): Produkt- und Gemeinwohlorientierung
+#### Lösung (iNKF): Produkt- und Gemeinwohlorientierung
 
 >Das Kerngeschäft der Gemeinden ist das Gemeinwohl.
 
@@ -127,7 +132,7 @@ Die Orientierung an den Leistungen, die Gemeinden für ihre Bürger erbringen (P
 Dennoch wird die positive Seite der unternehmerischen Gewinnorientierung nicht vernachlässigt, welche im sparsamen und wirtschaftlichen Umgang mit Ressourcen besteht, sowie sich  an den Wünschen und Bedürfnissen aller Interessengruppen orientiert. Diese Aspekte tragen neben der *ad hoc* auf soziale Nachhaltigkeit fokussierte Gemeinwohlorientierung zu der finanziellen und ökologischen Komponente von Nachhaltigkeit bei (3-Säulen-Modell).
 
 
-#### 3.3.1 Problem (NKF): Komplex und kompliziert
+### 3.3. Komplex und kompliziert
 
 Aufgrund der Komplexität kann das NKF-System in den Gemeinden nicht wirklich umgesetzt und gelebt werden. Tatsächlich (**TODO** mit Zitat belegen, Interview mit Kämmerer) empfinden die Gemeinden das NKF-System als eine erhebliche Mehrbelastung mit sehr begrenztem Nutzen.
 Durch die unsachgemäße Einführung der Doppelten Buchführung haben sich die Kommunen eine zweckentfremdete Rechnungslegung zugelegt, die eigentlich von und für gewinnorientierte Unternehmen entwickelt wurde.
@@ -138,34 +143,34 @@ Durch die unsachgemäße Einführung der Doppelten Buchführung haben sich die K
 Die Folge sind riesige Tabelle, die wenig relevante Daten enthalten. Beispielsweise hat die Tabelle "71147-14i" der Kölner Finanzbuchhaltung über 5,8 Mill. Zeilen (Auszahlungen nach Gemeinden x Auszahlungskonten x Produktgruppen = 442 x 153 x 87) pro Jahr – aber weniger als 10% der Zeilen enthalten Informationen.
 
 
-#### 3.3.2 Lösung (iNKF): Spezifische Rechnungslegung implementiert
+#### Lösung (iNKF): Spezifische Rechnungslegung implementiert
 
 „Der Haushalt ist und bleibt das zentrale Steuerungs- und Rechenschaftsinstrument in der kommunalen Verwaltung. Künftig muss er eine Grundlage für die Outputsteuerung statt der bisherigen Inputsteuerung darstellen. Neben den Erträgen und Aufwendungen sowie die Einzahlungen und Auszahlungen als haushaltswirtschaftliche Rechengrößen kommt der Produktorientierung eine besondere Bedeutung zu. Sie zeigt sich in den Teilplänen des gemeindlichen Haushaltsplans als örtliche Steuerungsebene.“5
 
 Wir haben eine solche Rechnungslegung entwickelt, die den spezifischen Aufgaben und Bedürfnissen der Gemeinden gerecht wird.
 
-#### 3.4.1 Problem: Streit um die „richtige“ Rechnungslegung
+### 3.4. Streit um die „richtige“ Rechnungslegung
 
 In allen klassischen Buchhaltungssystemen werden die Geschäftsvorfälle nach bestimmten Kriterien und damit nach einer bestimmten Interpretation gebucht. Diese Kriterien sind in den Rechnungslegungsvorschriften festgelegt. Dabei entsteht zwangsläufig der Kampf um die „richtige“ Interpretation. Die Rechnungslegung nach HGB unterscheidet sich von der Rechnungslegung nach US-GAAP oder IFRS. Es macht einen erheblichen Unterschied, ob z.B. ein Gebäude nach dem Zeitwert mit z.B. 100.000 € oder nach dem aktuellen Marktwert mit 500.000 € in der Bilanz steht.
 
 In klassischen Rechnungslegungssystemen kommt es durch die Buchung eines Geschäftsvorfalls nicht nur zu einer bestimmten Interpretation von Fakten, sondern wertvolles Fakten- und Beziehungswissen geht teilweise verloren.
 In den klassischen Rechnungslegungssystemen werden teilweise maschinell und teilweise manuell aus den buchungsrelevanten Geschäftsvorfällen Buchungen generiert bzw. abgeleitet. Die Buchungen werden auf Konten gesammelt und als Datensätze in Datenbanken gespeichert. Für die Rechnungslegung werden die Buchungen auf den Konten saldiert und durch manuelle und maschinell generierte Abschlussbuchungen ergänzt. Danach werden ein oder mehrere Konten in den Bilanzpositionen und Positionen der Gewinn- und Verlustrechnung zusammengefasst.
 
-#### 3.4.2 Lösung (iNKF): Trennung von Fakten und Interpretationen
+#### Lösung (iNKF): Trennung von Fakten und Interpretationen
 
 In der multidimensionalen Buchhaltung besteht eine strikte Trennung von Fakten und der Interpretation dieser Fakten.
 In der Datenbank werden nicht die Buchungen (= interpretierte Fakten), sondern nur die Geschäftsvorfälle (= Fakten) gespeichert. Die Bilanz oder Gewinn- und Verlustrechnung wird dann automatisiert aus diesen Fakten berechnet. Die automatisierte Berechnung ist die in Programme und Interpretationsschemata gegossene Interpretation der Fakten. Die Buchungssätze sind in der multidimensionalen Buchhaltung lediglich ein Zwischenergebnis, das zur Dokumentation gespeichert werden kann. Durch die Trennung von Fakten und der Interpretation der Fakten können die Fakten, auch rückwirkend, nach beliebig vielen und unterschiedlichen Interpretationen bewertet werden. Diese unterschiedlichen Interpretationen können als unterschiedliche Sichten auf die Fakten verstanden werden. Der Streit um die „richtige“ Rechnungslegung und Bewertung wird insofern beigelegt, dass man unterschiedliche Sichtweisen zulässt.
 
 
-### 3.4  Übergeordnete Ziele
+### 3.5.  Übergeordnete Ziele
 > *"Der Weg zur globalen Demokratie führt nicht durch die Staaten. Er führt durch Städte. Die Demokratie wurde in der antiken Polis geboren. Ich glaube, sie kann in der globalen Kosmopolis wiedergeboren werden. Auf dieser Reise von Polis zu Kosmopolis können wir die Macht der Demokratie wieder entdecken auf einer globalen Ebene. Einen Völkerbund können wir nicht kreieren. Das ist gescheitert. Aber einen Städtebund. Keine Vereinten [..] Nationen, sondern die Vereinten Städte der Welt." (Benjamin Barber, [TED-Talk][4])*
 [4]: [https://www.ted.com/talks/benjamin_barber_why_mayors_should_rule_the_world/transcript?language=de1
-#### 3.4.1 Kooperation
+#### 3.5.1 Kooperation
 Von unserer Infrastruktur werden nicht nur Gemeinden in der Bundesrepublik, sondern Gemeinden weltweit profitieren.
 
 Wir glauben, dass die Kommunen für Demokratie und Wohlstand in der Welt eine Schlüsselrolle einnehmen und dass diese Rolle in der globalisierten Welt noch an Bedeutung gewinnen wird. Wir glauben, dass kooperatives Verhalten unter den Gemeinden, auf Basis von neutralen Vergleichskennzahlen, den Wunsch der Kommunen, wirtschaftlich unabhängig und demokratisch fortschrittlich organisiert zu sein, besser erfüllen kann, als wenn diese versuchen das Wettbewerbsprinzip der Unternehmen zu übernehmen.
 
-#### 3.4.2 Synergieeffekte schaffen
+#### 3.5.2 Synergieeffekte schaffen
 
 Jede Gemeinde, die am iNKF-System angeschlossen ist, hat automatisch Zugriff auf die nicht vertraulichen Daten aller Teilnehmerinnen. Vertragsvorlagen, Planungsunterlagen, Arbeitspläne und praktische Erfahrungen könnten so effektiv geteilt werden und zu erheblichen Synergieeffekten führen.
 
@@ -173,10 +178,10 @@ Erst das Wissen, wo die entscheidenden Unterschiede in der Produktion und in den
 
 Wenn beispielsweise eine Gemeinde einen neuen Kindergarten plant, dann stehen ihr automatisch alle Unterlagen aller realisierten und in Realisierung befindlichen Kindergärten zur Verfügung. Ein Sachbearbeiter könnte diese Unterlagen nicht nur für die eigene Planung nutzen, sondern aus diesen Erfahrungen lernen und sich gegebenenfalls mit den Kollegen anderer Städte austauschen. Von der Planung einzelner Produkte bis zu ihrer Realisierung können so Gemeinden voneinander profitieren und lernen.
 
-#### 3.4.3 Gemeinsame konstruktive Politik
+#### 3.5.3 Gemeinsame konstruktive Politik
 Für die VertreterInnen in den Parlamenten besteht ein erhebliches Profilierungspotential, wenn Kritikpunkte der Gemeindefinanzierung klar herausgearbeitet werden können und sich daraus konkrete Verbesserungsvorschläge einbringen lassen.
 
-#### 3.4.4 Berichte
+#### 3.5.4 Berichte
 Dadurch, dass die Daten semantisch gespeichert sind, ist eine teil-automatischen Erstellung von Berichten möglich, zumindest, wenn es um die Erläuterung der Finanzdaten geht
 
 ## 4 Technologie
@@ -254,7 +259,7 @@ cc: Maximilian Dörrbecker, wikimedia
 
 ## 5 Marktanalyse
 
-In der Bundesrepublik gibt es ca. 11.000 Gemeinden, davon 77 Groß- und 600 Mittelstädte (mit mehr als 100.000, bzw. 20.000 Einwohnern). Weltweit sind es ca 2 Millionen Gemeinden und 2,896 Städte mit mehr als 150.000 Einwohnern. 
+In der Bundesrepublik gibt es ca. 11.000 Gemeinden, davon 77 Groß- und 600 Mittelstädte (mit mehr als 100.000, bzw. 20.000 Einwohnern). Weltweit sind es ca 2 Millionen Gemeinden und 2.896 Städte mit mehr als 150.000 Einwohnern. 
 
 Kosteneinsparung
 Synergieeffekte durch eine opensource-Lösung an denen sich alle Gemeinden beteiligen und von der alle Profitieren. Allein für die 11.000 Gemeinden in Deutschland, wären mit €100,- pro Gemeinde schon eine veritable Software mit vielfältigen Sonderanforderungen realisierbar/darstellbar.
@@ -283,9 +288,9 @@ Informations-Dienstleister für Kommunen
 
 * Beispielsweise werden in den Finanzplänen der Stadt Bottrop die Positionen laut Spaltenüberschrift nach Einzahlungs- und Auszahlungsarten gruppiert. Tatsächliche werden sie jedoch nach Ertrags- und Aufwandsarten gruppiert. Die Stadt Bochum vermeidet dies indem sie auf eine Spaltenüberschrift verzichtet.
 
-* Die Stadt Bottrop weißt Einzahlungen mit positivem und die Stadt Bochum mit negativem Vorzeichen aus.
+* Die Stadt Bottrop weist Einzahlungen mit positivem und die Stadt Bochum mit negativem Vorzeichen aus.
 
-* Die Stadt Bochum weißt im Ist-Gesamtfinanzplan 2011 Liquide Mittel in Höhe von 109.128.592,52 € aus. In der Bilanz 2011 werden dagegen Liquide Mittel in Höhe von 2.665.016,50 € ausgewiesen. Der Ansatz in der Bilanz ist vermutlich richtig, während der Ansatz im Gesamtfinanzplan keine Liquide Mittel, sondern eine Finanzierungslücke darstellt.
+* Die Stadt Bochum weist im Ist-Gesamtfinanzplan 2011 Liquide Mittel in Höhe von 109.128.592,52 € aus. In der Bilanz 2011 werden dagegen Liquide Mittel in Höhe von 2.665.016,50 € ausgewiesen. Der Ansatz in der Bilanz ist vermutlich richtig, während der Ansatz im Gesamtfinanzplan keine Liquide Mittel, sondern eine Finanzierungslücke darstellt.
 
 
 ## 6. Technische Details
